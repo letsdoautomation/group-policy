@@ -4,5 +4,5 @@ Documentation link: [Documentation](https://wiki.videolan.org/Documentation:Inst
 
 #### wix build command
 ```powershell
-wix build "Notepad++.wxs"
+wix build VLC.wxs
 ```
