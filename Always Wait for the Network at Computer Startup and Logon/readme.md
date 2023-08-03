@@ -2,7 +2,7 @@ Computer Configuration > Administrative Templates > System > Logon > "Always Wai
 
 
  "The processing of Group Policy failed. Windows could not obtain the name of a domain controller. This could be caused by a name resolution failure. Verify your Domain Name System (DNS) is configured and working correctly." <br />
-<img src="img/fail1" width=80% height=80%>
+<img src="img/fail1.png" width=80% height=80%>
 
  "The processing of Group Policy failed because of an internal system error. Please see the Group Policy operational log for the specific error message. An attempt will be made to process Group Policy again at the next refresh cycle." <br />
-<img src="img/fail2" width=80% height=80%>
+<img src="img/fail2.png" width=80% height=80%>
