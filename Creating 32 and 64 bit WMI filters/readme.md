@@ -5,4 +5,8 @@
 gpresult /SCOPE COMPUTER /R
 ```
 
+<p>To troubleshoot wmi</p>
 
+```powershell
+gwmi -Query "SELECT AddressWidth FROM Win32_Processor"
+```
