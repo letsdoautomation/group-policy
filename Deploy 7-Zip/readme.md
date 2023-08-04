@@ -4,7 +4,7 @@ Documentation link: [Documentation](https://7-zip.org/faq.html#:~:text=How%20can
 
 
 ### My enviroment setup
-Group Policy and settings that i have configured in my server and clients <br />
+Group Policy and settings that i have configured in my servers and clients <br />
 [Group Policy: Creating 32 and 64 bit WMI filters](https://youtu.be/ffBIiQaVXGM) <br />
 [Group Policy: Always Wait for the Network at Computer Startup and Logon](https://youtu.be/8BF0rU7peNk) <br />
 [Group Policy: Display highly detailed status messages](https://youtu.be/2LB51n4O1Lk) <br />
