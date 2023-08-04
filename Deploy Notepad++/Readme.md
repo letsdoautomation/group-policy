@@ -1,7 +1,7 @@
 ### Documentation and download
 Download link: [Notepad++](https://notepad-plus-plus.org/downloads/) <br />
 Documentation link: N/A <br />
-()[] <br />
+(Windows Tools: Download and install .NET 7 SDK and WiX  toolset 4 CLI tool)[https://youtu.be/ukrIlmadTjw] <br />
 
 #### wix build command
 ```powershell
