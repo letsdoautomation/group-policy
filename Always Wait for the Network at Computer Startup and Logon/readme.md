@@ -1,4 +1,5 @@
-Computer Configuration > Administrative Templates > System > Logon > "Always Wait for the Network at Computer Startup and Logon" set to "Enabled".
+Computer Configuration > Administrative Templates > System > Logon > "Always Wait for the Network at Computer Startup and Logon" set to "Enabled". <br />
+<img src="img/note.png" width=60% height=60%>
 
 
  "The processing of Group Policy failed. Windows could not obtain the name of a domain controller. This could be caused by a name resolution failure. Verify your Domain Name System (DNS) is configured and working correctly." <br />
