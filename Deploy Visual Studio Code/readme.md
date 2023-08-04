@@ -1,7 +1,8 @@
 ### Documentation and download
 Download link: [Visual Studio Code](https://code.visualstudio.com/Download) <br />
 Documentation link: [Documentation](https://code.visualstudio.com/docs/setup/windows) <br />
-Alternative documentation: [Inno Setup](https://jrsoftware.org/ishelp/index.php?topic=setupcmdline)
+Alternative documentation: [Inno Setup](https://jrsoftware.org/ishelp/index.php?topic=setupcmdline) <br />
+WiX Toolset 4 CLI video: [Windows Tools: Download and install .NET 7 SDK and WiXtoolset 4 CLI tool](https://youtu.be/ukrIlmadTjw) <br />
 
 #### wix build command
 ```powershell
