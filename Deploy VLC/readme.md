@@ -1,6 +1,6 @@
 ### Documentation and download
 Download link: [VLC](https://www.videolan.org/) <br />
-Documentation link: [Documentation](https://wiki.videolan.org/Documentation:Installing_VLC/)
+Documentation link: [Documentation](https://wiki.videolan.org/Documentation:Installing_VLC/) <br />
 WiX Toolset 4 CLI video: [Windows Tools: Download and install .NET 7 SDK and WiXtoolset 4 CLI tool](https://youtu.be/ukrIlmadTjw) <br />
 
 #### wix build command
