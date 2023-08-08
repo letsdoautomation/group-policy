@@ -8,7 +8,7 @@ Download link: [Visual Studio Code](https://code.visualstudio.com/Download) <br 
 /VERYSILENT /NORESTART /SUPPRESSMSGBOXES /MERGETASKS=!runcode
 ```
 
-#### vscode silent parameters
+#### vlc silent parameters
 ```powershell
 /S
 ```
