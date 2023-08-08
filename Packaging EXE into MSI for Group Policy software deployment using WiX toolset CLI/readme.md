@@ -1,0 +1,16 @@
+### Documentation and download
+Download link: [VLC](https://www.videolan.org/) <br />
+Download link: [Visual Studio Code](https://code.visualstudio.com/Download) <br />
+
+#### generate guid
+```powershell
+[guid]::NewGuid().guid
+```
+
+#### wix build command
+```powershell
+wix build VLC.wxs
+wix build vscode.wxs
+```
+
+WiX Toolset 4 CLI video: [Windows Tools: Download and install .NET 7 SDK and WiXtoolset 4 CLI tool](https://youtu.be/ukrIlmadTjw) <br />
