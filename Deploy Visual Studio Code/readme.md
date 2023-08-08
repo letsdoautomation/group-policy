@@ -4,11 +4,15 @@ Documentation link: [Documentation](https://code.visualstudio.com/docs/setup/win
 Alternative documentation: [Inno Setup](https://jrsoftware.org/ishelp/index.php?topic=setupcmdline) <br />
 WiX Toolset 4 CLI video: [Windows Tools: Download and install .NET 7 SDK and WiXtoolset 4 CLI tool](https://youtu.be/ukrIlmadTjw) <br />
 
+#### generate guid
+```powershell
+[guid]::NewGuid().guid
+```
+
 #### wix build command
 ```powershell
 wix build vscode.wxs
 ```
-
 
 ### My enviroment setup
 Group Policy and settings that i have configured in my servers and clients <br />
