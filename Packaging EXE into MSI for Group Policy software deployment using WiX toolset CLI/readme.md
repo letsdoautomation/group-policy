@@ -2,6 +2,17 @@
 Download link: [VLC](https://www.videolan.org/) <br />
 Download link: [Visual Studio Code](https://code.visualstudio.com/Download) <br />
 
+
+#### vscode silent parameters
+```powershell
+/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /MERGETASKS=!runcode
+```
+
+#### vscode silent parameters
+```powershell
+/S
+```
+
 #### generate guid
 ```powershell
 [guid]::NewGuid().guid
