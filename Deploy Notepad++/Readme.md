@@ -3,6 +3,11 @@ Download link: [Notepad++](https://notepad-plus-plus.org/downloads/) <br />
 Documentation link: N/A <br />
 WiX Toolset 4 CLI video: [Windows Tools: Download and install .NET 7 SDK and WiXtoolset 4 CLI tool](https://youtu.be/ukrIlmadTjw) <br />
 
+#### generate guid
+```powershell
+[guid]::NewGuid().guid
+```
+
 #### wix build command
 ```powershell
 wix build "Notepad++.wxs"
