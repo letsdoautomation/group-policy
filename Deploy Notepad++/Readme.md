@@ -1,12 +1,6 @@
 ### Documentation and download
 Download link: [Notepad++](https://notepad-plus-plus.org/downloads/) <br />
 Documentation link: N/A <br />
-WiX Toolset 4 CLI video: [Windows Tools: Download and install .NET 7 SDK and WiXtoolset 4 CLI tool](https://youtu.be/ukrIlmadTjw) <br />
-
-#### generate guid
-```powershell
-[guid]::NewGuid().guid
-```
 
 #### wix build command
 ```powershell
@@ -14,6 +8,9 @@ wix build "Notepad++.wxs"
 ```
 
 ### My enviroment setup
+WiX Toolset 4 CLI <br />
+[Windows Tools: Download and install .NET 7 SDK and WiXtoolset 4 CLI tool](https://youtu.be/ukrIlmadTjw) <br />
+[Group Policy: Packaging EXE into MSI for Group Policy software deployment using WiX toolset CLI](https://youtu.be/pZ42XS2Ucsg) <br />
 Group Policy and settings that i have configured in my servers and clients <br />
 [Group Policy: Creating 32 and 64 bit WMI filters](https://youtu.be/ffBIiQaVXGM) <br />
 [Group Policy: Always Wait for the Network at Computer Startup and Logon](https://youtu.be/8BF0rU7peNk) <br />
