@@ -2,6 +2,11 @@
 Download link: [Notepad++](https://notepad-plus-plus.org/downloads/) <br />
 Documentation link: N/A <br />
 
+#### generate guid
+```powershell
+[guid]::NewGuid().guid
+```
+
 #### wix build command
 ```powershell
 wix build "Notepad++.wxs"
