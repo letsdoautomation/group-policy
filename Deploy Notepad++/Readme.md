@@ -2,6 +2,12 @@
 Download link: [Notepad++](https://notepad-plus-plus.org/downloads/) <br />
 Documentation link: N/A <br />
 
+#### Silent switch to install software
+```powershell
+# Make sure that executable name is correct
+/S
+```
+
 #### generate guid
 ```powershell
 [guid]::NewGuid().guid
