@@ -1,10 +1,10 @@
-﻿<?define name = "Notepad++"?>
-<?define exe = "npp.8.5.4.Installer.x64.exe"?>
-<?define path = "D:\Downloads"?>
-<?define silentArgs = "/S"?>
-<?define version = "8.5.4"?>
-<?define publisher = "letsdoautomation"?>
-<?define guid = "fd2480ff-e46b-43c7-82f8-e510b2e0f33c"?>
+﻿<?define name = ""?>
+<?define exe = ""?>
+<?define path = ""?>
+<?define silentArgs = ""?>
+<?define version = ""?>
+<?define publisher = ""?>
+<?define guid = ""?>
 
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
         <Package Name="$(var.name)" Manufacturer="$(var.publisher)" Version="$(var.version)"
