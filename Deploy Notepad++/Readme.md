@@ -4,7 +4,6 @@ Documentation link: N/A <br />
 
 #### Silent switch to install software
 ```powershell
-# Make sure that executable name is correct
 /S
 ```
 
