@@ -24,7 +24,7 @@ DISABLEDESKTOPSHORTCUT = 1
 ```
 
 ### My enviroment setup
-[Windows tools: Download and install Orca MSI file editor](https://youtu.be/dFKwxNZ8PXY)
+[Windows tools: Download and install Orca MSI file editor](https://youtu.be/dFKwxNZ8PXY) <br />
 Group Policy and settings that i have configured in my servers and clients <br />
 [Group Policy: Creating 32 and 64 bit WMI filters](https://youtu.be/ffBIiQaVXGM) <br />
 [Group Policy: Always Wait for the Network at Computer Startup and Logon](https://youtu.be/8BF0rU7peNk) <br />
