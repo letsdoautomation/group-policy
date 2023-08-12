@@ -18,7 +18,7 @@ cmd /c msiexec /a "D:\Downloads\Reader_deployment\AcroRead.msi" /p "D:\Downloads
 
 #### (OPTIONAL)MSI settings
 ```powershell
-EULA_ACCEPT = 1
+EULA_ACCEPT = YES
 DISABLEDESKTOPSHORTCUT = 1
 ```
 
