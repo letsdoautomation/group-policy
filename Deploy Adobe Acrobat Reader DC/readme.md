@@ -1,8 +1,7 @@
 ### Documentation and download
 Download link: [Adobe Acrobat Reader DC](https://get.adobe.com/reader/enterprise/) <br />
-Documentation link:  [Documentation](https://www.adobe.com/devnet-docs/acrobatetk/tools/VirtualizationGuide/cmdline.html#msi-support)
+Documentation link:  [Documentation](https://www.adobe.com/devnet-docs/acrobatetk/tools/VirtualizationGuide/cmdline.html#msi-support)  <br />
 MSI parameters: [Documentation](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/properties.html#command-line-example)
-
 
 #### Extract MSI files
 ```powershell
