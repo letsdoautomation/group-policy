@@ -1,6 +1,8 @@
 ### Documentation and download
 Download link: [Adobe Acrobat Reader DC](https://get.adobe.com/reader/enterprise/) <br />
 Documentation link:  [Documentation](https://www.adobe.com/devnet-docs/acrobatetk/tools/VirtualizationGuide/cmdline.html#msi-support)
+MSI parameters: [Documentation](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/properties.html#command-line-example)
+
 
 #### Extract MSI files
 ```powershell
@@ -13,6 +15,12 @@ cmd /c msiexec /a "D:\Downloads\Reader\AcroRead.msi" TARGETDIR="D:\Downloads\Rea
 #### Update administrative installation point
 ```powershell
 cmd /c msiexec /a "D:\Downloads\Reader_deployment\AcroRead.msi" /p "D:\Downloads\Reader\AcroRdrDCUpd2300320269.msp" TARGETDIR="D:\Downloads\Reader_deployment"
+```
+
+#### (OPTIONAL)MSI settings
+```powershell
+EULA_ACCEPT = 1
+DISABLEDESKTOPSHORTCUT = 1
 ```
 
 ### My enviroment setup
