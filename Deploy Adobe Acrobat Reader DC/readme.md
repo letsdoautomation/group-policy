@@ -1,7 +1,6 @@
 ### Documentation and download
 Download link: [Adobe Acrobat Reader DC](https://get.adobe.com/reader/enterprise/) <br />
 Documentation link:  [Documentation](https://www.adobe.com/devnet-docs/acrobatetk/tools/VirtualizationGuide/cmdline.html#msi-support)  <br />
-MSI parameters: [Documentation](https://www.adobe.com/devnet-docs/acrobatetk/tools/AdminGuide/properties.html#command-line-example)
 
 #### Extract MSI files
 ```powershell
@@ -16,15 +15,7 @@ cmd /c msiexec /a "D:\Downloads\Reader\AcroRead.msi" TARGETDIR="D:\Downloads\Rea
 cmd /c msiexec /a "D:\Downloads\Reader_deployment\AcroRead.msi" /p "D:\Downloads\Reader\AcroRdrDCUpd2300320269.msp" TARGETDIR="D:\Downloads\Reader_deployment"
 ```
 
-#### (OPTIONAL)MSI settings
-```powershell
-EULA_ACCEPT = YES
-DISABLEDESKTOPSHORTCUT = 1
-```
-
 ### My enviroment setup
-Orca <br />
-[Windows tools: Download and install Orca MSI file editor](https://youtu.be/dFKwxNZ8PXY) <br />
 Group Policy and settings that i have configured in my servers and clients <br />
 [Group Policy: Creating 32 and 64 bit WMI filters](https://youtu.be/ffBIiQaVXGM) <br />
 [Group Policy: Always Wait for the Network at Computer Startup and Logon](https://youtu.be/8BF0rU7peNk) <br />
