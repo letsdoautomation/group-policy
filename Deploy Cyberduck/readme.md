@@ -2,15 +2,12 @@
 Download link: [Cyberduck](https://cyberduck.io/download/) <br />
 Documentation link: N/A
 
-#### wix build command
+#### MSI location
 ```powershell
-wix build cyberduck.wxs
+C:\ProgramData\Package Cache\{04524BC9-43C8-4523-A0BC-36E0BAAEDEA8}v8.6.3.40040
 ```
 
 ### My enviroment setup
-WiX Toolset 4 CLI <br />
-[Windows Tools: Download and install .NET 7 SDK and WiXtoolset 4 CLI tool](https://youtu.be/ukrIlmadTjw) <br />
-[Group Policy: Packaging EXE into MSI for Group Policy software deployment using WiX toolset CLI](https://youtu.be/pZ42XS2Ucsg) <br />
 Group Policy and settings that i have configured in my servers and clients <br />
 [Group Policy: Creating 32 and 64 bit WMI filters](https://youtu.be/ffBIiQaVXGM) <br />
 [Group Policy: Always Wait for the Network at Computer Startup and Logon](https://youtu.be/8BF0rU7peNk) <br />
