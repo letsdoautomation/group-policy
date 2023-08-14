@@ -1,0 +1,39 @@
+<?define name = "Brave Browser"?>
+<?define exe = "BraveBrowserStandaloneSilentSetup.exe"?>
+<?define path = "D:\Downloads"?>
+<?define version = "1.56.20"?>
+<?define publisher = "letsdoautomation"?>
+<?define guid = "d7300064-2e25-48cc-bccb-ee5d5e6e91b0"?>
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+        <Package Name="$(var.name)" Manufacturer="$(var.publisher)" Version="$(var.version)"
+                UpgradeCode="$(var.guid)">
+
+                <Media Id="1" Cabinet="setup.cab" EmbedCab="yes" />
+
+                <Feature Id="InstallFeature" Title="Install Feature">
+                        <ComponentRef Id="component" />
+                        <ComponentRef Id="registry" />
+                </Feature>
+
+                <CustomAction Id="run_exe" Return="ignore" Execute="deferred"
+                        ExeCommand="$(var.exe)" HideTarget="no" Impersonate="no"
+                        FileRef="File0" />
+
+                <StandardDirectory Id="CommonAppDataFolder">
+                        <Directory Id="INSTALLLOCATION" Name="software_deployment\$(var.name)\{$(var.guid)}">
+                                <Component Id="component" DiskId="1" >
+                                        <File Id="File0" Name="$(var.exe)"
+                                                Source="$(var.path)\$(var.exe)" />
+                                </Component>
+                                <Component Id="registry">
+                                        <RegistryKey Root="HKLM"
+                                                Key="SOFTWARE\Microsoft\Active Setup\Installed Components\{$(var.guid)}">
+                                                <RegistryValue Type="string" Value="$(var.name) deployment"/>
+                                                <RegistryValue Name="StubPath" Type="string" Value="[INSTALLLOCATION]$(var.exe)"/>
+                                        </RegistryKey>
+                                </Component>
+                        </Directory>
+                </StandardDirectory>
+        </Package>
+</Wix>
