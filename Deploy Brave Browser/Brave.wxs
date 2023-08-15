@@ -7,7 +7,7 @@
 
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
         <Package Name="$(var.name)" Manufacturer="$(var.publisher)" Version="$(var.version)"
-                UpgradeCode="$(var.guid)">
+                UpgradeCode="$(var.guid)" Scope="perMachine">
 
                 <Media Id="1" Cabinet="setup.cab" EmbedCab="yes" />
 
