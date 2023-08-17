@@ -44,7 +44,7 @@ Documentation link: N/A <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
 <b>Key path:</b> SOFTWARE\Cyberduck <br />
 
-<img src="img/2023-08-17 18_31_32-srv01 - VMware Workstation.png" width=40% height=40%>
+<img src="img/2023-08-17 19_16_48-srv01 - VMware Workstation.png" width=40% height=40%>
 
 <b>Delete file(s):</b>%CommonAppdataDir%\deployment_files\cyberduck\run.ps1 <br />
 
