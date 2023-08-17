@@ -26,13 +26,13 @@ Documentation link: N/A <br />
 <b>Source file(s):</b> \\\\srv02\software\cyberduck\run.ps1 <br />
 <b>Destination File:</b> %CommonAppdataDir%\deployment_files\cyberduck\run.ps1 <br />
 
-<img src="img/2023-08-17 18_50_02-srv01 - VMware Workstation.png" width=40% height=40%>
+<img src="img/2023-08-17 19_09_35-srv01 - VMware Workstation.png" width=40% height=40%>
 
 #### Item-level targeting
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
 <b>Key path:</b> SOFTWARE\Cyberduck <br />
 
-<img src="img/2023-08-17 19_09_35-srv01 - VMware Workstation.png" width=40% height=40%>
+<img src="img/2023-08-17 18_31_32-srv01 - VMware Workstation.png" width=40% height=40%>
 
 ## My enviroment setup
 Group Policy and settings that i have configured in my servers and clients <br />
