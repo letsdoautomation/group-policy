@@ -1,22 +1,38 @@
-### Documentation and download
+## Documentation and download
 Download link: [Cyberduk](https://cyberduck.io/download/) <br />
 Documentation link: N/A <br />
 
-### For file deployment
-##### Path
-Policy path: Computer Configuration > Preferences > Windows Settings > Files <br />
-##### General
+## For setup file deployment
+
+<b>Policy path:</b> Computer Configuration > Preferences > Windows Settings > Files <br />
+
+<b>Source file(s):</b> \\srv02\software\cyberduck\Cyberduck-Installer-8.6.3.40040.exe <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment_files\cyberduck\Cyberduck-Installer-8.6.3.40040.exe <br />
+
 <img src="img/2023-08-17 18_31_06-srv01 - VMware Workstation.png" width=40% height=40%>
-Source file(s): \\srv02\software\cyberduck\Cyberduck-Installer-8.6.3.40040.exe <br />
-Destination File: %CommonAppdataDir%\deployment_files\Cyberduck-Installer-8.6.3.40040.exe <br />
 
-##### Item-level targeting
+#### Item-level targeting
+<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
+<b>Key path:</b> SOFTWARE\Cyberduck <br />
+
 <img src="img/2023-08-17 18_31_32-srv01 - VMware Workstation.png" width=40% height=40%>
-Hive: HKEY_LOCAL_MACHINE <br />
-Key path: SOFTWARE\Cyberduck
 
+## For script file deployment
 
-### My enviroment setup
+<b>Policy path:</b> Computer Configuration > Preferences > Windows Settings > Files <br />
+
+<b>Source file(s):</b> \\srv02\software\cyberduck\run.ps1 <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment_files\cyberduck\run.ps1 <br />
+
+<img src="img/2023-08-17 18_31_06-srv01 - VMware Workstation.png" width=40% height=40%>
+
+#### Item-level targeting
+<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
+<b>Key path:</b> SOFTWARE\Cyberduck <br />
+
+<img src="img/2023-08-17 18_31_32-srv01 - VMware Workstation.png" width=40% height=40%>
+
+## My enviroment setup
 Group Policy and settings that i have configured in my servers and clients <br />
 [Group Policy: Creating 32 and 64 bit WMI filters](https://youtu.be/ffBIiQaVXGM) <br />
 [Group Policy: Always Wait for the Network at Computer Startup and Logon](https://youtu.be/8BF0rU7peNk) <br />
