@@ -34,27 +34,6 @@ Documentation link: N/A <br />
 
 <img src="img/2023-08-17 18_31_32-srv01 - VMware Workstation.png" width=40% height=40%>
 
-## For setup file removal
-
-<b>Delete file(s):</b>%CommonAppdataDir%\deployment_files\cyberduck\Cyberduck-Installer-8.6.3.40040.exe <br />
-
-<img src="img/2023-08-17 19_14_44-srv01 - VMware Workstation.png" width=40% height=40%>
-
-#### Item-level targeting
-<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Cyberduck <br />
-
-<img src="img/2023-08-17 19_16_48-srv01 - VMware Workstation.png" width=40% height=40%>
-
-<b>Delete file(s):</b>%CommonAppdataDir%\deployment_files\cyberduck\run.ps1 <br />
-
-<img src="img/2023-08-17 19_14_44-srv01 - VMware Workstation.png" width=40% height=40%>
-
-#### Item-level targeting
-<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Cyberduck <br />
-
-<img src="img/2023-08-17 19_16_48-srv01 - VMware Workstation.png" width=40% height=40%>
 
 ## My enviroment setup
 Group Policy and settings that i have configured in my servers and clients <br />
