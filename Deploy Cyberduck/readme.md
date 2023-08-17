@@ -34,6 +34,19 @@ Documentation link: N/A <br />
 
 <img src="img/2023-08-17 18_31_32-srv01 - VMware Workstation.png" width=40% height=40%>
 
+## Path to Scheduled Tasks policy settings
+
+<b>Policy path:</b> Computer Configuration > Preferences > Control Panel Settings > Scheduled Tasks <br />
+
+## For Scheduled Tasks deployment
+
+<b>Name:</b> Deploy Cyberduck
+<b>When runing the task, use the following user account:</b> NT AUTHORITY\System
+
+#### Action
+
+<b>Program/Script:</b> powershell.exe <br />
+<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment_files\cyberduck\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment_files\cyberduck\Cyberduck-Installer-8.6.3.40040.exe" -ArgumentList "/quiet" -Registry "HKLM:\SOFTWARE\Cyberduck" <br />
 
 ## My enviroment setup
 Group Policy and settings that i have configured in my servers and clients <br />
