@@ -40,7 +40,7 @@ Documentation link: N/A <br />
 
 ## For Scheduled Tasks deployment
 
-<b>Name:</b> Deploy Cyberduck
+<b>Name:</b> Deploy Cyberduck <br />
 <b>When runing the task, use the following user account:</b> NT AUTHORITY\System
 
 <img src="img/2023-08-17 20_40_18-srv01 - VMware Workstation.png" width=40% height=40%>
@@ -59,6 +59,14 @@ Documentation link: N/A <br />
 <b>Key path:</b> SOFTWARE\Cyberduck <br />
 
 <img src="img/2023-08-17 18_31_32-srv01 - VMware Workstation.png" width=40% height=40%>
+
+## For Scheduled Tasks removal
+
+#### Item-level targeting
+<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
+<b>Key path:</b> SOFTWARE\Cyberduck <br />
+
+<img src="img/2023-08-17 21_27_42-srv01 - VMware Workstation.png" width=40% height=40%>
 
 ## My enviroment setup
 Group Policy and settings that i have configured in my servers and clients <br />
