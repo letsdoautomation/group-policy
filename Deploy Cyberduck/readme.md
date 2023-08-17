@@ -9,6 +9,7 @@ Policy path: Computer Configuration > Preferences > Windows Settings > Files <br
 <img src="img/2023-08-17 18_31_06-srv01 - VMware Workstation.png" width=40% height=40%>
 Source file(s): \\srv02\software\cyberduck\Cyberduck-Installer-8.6.3.40040.exe <br />
 Destination File: %CommonAppdataDir%\deployment_files\Cyberduck-Installer-8.6.3.40040.exe <br />
+
 ##### Item-level targeting
 <img src="img/2023-08-17 18_31_32-srv01 - VMware Workstation.png" width=40% height=40%>
 Hive: HKEY_LOCAL_MACHINE <br />
