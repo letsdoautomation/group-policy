@@ -1,8 +1,16 @@
 ### Documentation and download
-Download link: [Cyberduk]() <br />
-Documentation link: N/A
+Download link: [Cyberduk](https://cyberduck.io/download/) <br />
+Documentation link: N/A <br />
 
-
+### For file deployment
+##### Path
+Policy path: Computer Configuration > Preferences > Windows Settings > Files <br />
+##### General
+Source file(s): \\srv02\software\cyberduck\Cyberduck-Installer-8.6.3.40040.exe <br />
+Destination File: %CommonAppdataDir%\deployment_files\Cyberduck-Installer-8.6.3.40040.exe <br />
+##### Item-level targeting
+Hive: HKEY_LOCAL_MACHINE <br />
+Key path: SOFTWARE\Cyberduck
 
 
 ### My enviroment setup
