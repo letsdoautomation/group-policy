@@ -11,7 +11,7 @@ if (!$Exe.Exists) {
     exit 0
 }
 
-if ($null -ne $registry -and !(Test-Path $registry)) {
+if (!(Test-Path $registry)) {
     $install_params = @{
         FilePath     = $Exe.FullName
         ArgumentList = $ArgumentList
