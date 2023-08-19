@@ -1,6 +1,6 @@
 ### Documentation and download
 Download link: [GIMP](https://www.gimp.org/downloads/) <br />
-Documentation link: N/A
+Documentation link: N/A <br />
 Alternative documentation: [Inno Setup](https://jrsoftware.org/ishelp/index.php?topic=setupcmdline)
 
 #### wix build command
