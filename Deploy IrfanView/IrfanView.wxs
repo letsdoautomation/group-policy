@@ -1,7 +1,7 @@
 ﻿<?define name = "IrfanView"?>
 <?define exe = "iview462_x64_setup.exe"?>
 <?define path = "D:\Downloads"?>
-<?define silentArgs = "/silent /desktop=1"?>
+<?define silentArgs = "/silent"?>
 <?define version = "4.62"?>
 <?define publisher = "letsdoautomation"?>
 <?define guid = "2370100b-b3f0-4f18-bc89-305cfbe35edd"?>
