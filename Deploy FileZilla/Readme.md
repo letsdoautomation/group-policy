@@ -1,10 +1,10 @@
 ### Documentation and download
-Download link: [Evernote](https://evernote.com/download) <br />
-Documentation link: N/A
+Download link: [FileZilla](https://filezilla-project.org/download.php?platform=win64) <br />
+Documentation link: [Documentation](https://wiki.filezilla-project.org/Silent_Setup)
 
 #### wix build command
 ```powershell
-wix build "evernote.wxs"
+wix build "FileZilla.wxs"
 ```
 
 ### My enviroment setup
