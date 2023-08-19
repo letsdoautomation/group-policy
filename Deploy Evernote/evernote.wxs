@@ -1,0 +1,40 @@
+<?define name = "Evernote"?>
+<?define exe = "Evernote-10.60.4-win-ddl-stage-20230803182206-83e835872b4138cd342f6515bf2b6907b5fec1a6-setup.exe"?>
+<?define path = "D:\Downloads"?>
+<?define silentArgs = "/S"?>
+<?define version = "10.60.4"?>
+<?define publisher = "letsdoautomation"?>
+<?define guid = "5e2438ee-2e4e-412d-beb2-94e2804a6413"?>
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+        <Package Name="$(var.name)" Manufacturer="$(var.publisher)" Version="$(var.version)"
+                UpgradeCode="$(var.guid)" Scope="perMachine">
+
+                <Media Id="1" Cabinet="setup.cab" EmbedCab="yes" />
+
+                <Feature Id="InstallFeature" Title="Install Feature">
+                        <ComponentRef Id="component" />
+                        <ComponentRef Id="registry" />
+                </Feature>
+
+                <CustomAction Id="run_exe" Return="ignore" Execute="deferred"
+                        ExeCommand="$(var.exe)" HideTarget="no" Impersonate="no"
+                        FileRef="File0" />
+
+                <StandardDirectory Id="CommonAppDataFolder">
+                        <Directory Id="INSTALLLOCATION" Name="deployment_files\$(var.name)\{$(var.guid)}">
+                                <Component Id="component" DiskId="1" >
+                                        <File Id="File0" Name="$(var.exe)"
+                                                Source="$(var.path)\$(var.exe)" />
+                                </Component>
+                                <Component Id="registry">
+                                        <RegistryKey Root="HKLM"
+                                                Key="SOFTWARE\Microsoft\Active Setup\Installed Components\{$(var.guid)}">
+                                                <RegistryValue Type="string" Value="$(var.name) deployment"/>
+                                                <RegistryValue Name="StubPath" Type="string" Value="[INSTALLLOCATION]$(var.exe) $(var.silentArgs)"/>
+                                        </RegistryKey>
+                                </Component>
+                        </Directory>
+                </StandardDirectory>
+        </Package>
+</Wix>

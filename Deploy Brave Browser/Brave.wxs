@@ -21,7 +21,7 @@
                         FileRef="File0" />
 
                 <StandardDirectory Id="CommonAppDataFolder">
-                        <Directory Id="INSTALLLOCATION" Name="software_deployment\$(var.name)\{$(var.guid)}">
+                        <Directory Id="INSTALLLOCATION" Name="deployment_files\$(var.name)\{$(var.guid)}">
                                 <Component Id="component" DiskId="1" >
                                         <File Id="File0" Name="$(var.exe)"
                                                 Source="$(var.path)\$(var.exe)" />
