@@ -1,5 +1,5 @@
 ### Documentation and download
-Download link: [Zoom](https://tools.pdf24.org/en/creator) <br />
+Download link: [PDF24](https://tools.pdf24.org/en/creator) <br />
 Documentation link: [Documentation](https://help.pdf24.org/en/forums/topic/pdf24-creator-msi-setup-parameter-arguments/)
 
 
