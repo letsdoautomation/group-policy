@@ -1,0 +1,37 @@
+﻿<?define name = "Opera"?>
+<?define exe = "OperaSetup.exe"?>
+<?define path = "D:\Downloads"?>
+<?define silentArgs = "--allusers=1 --silent=1 --launchbrowser=0"?>
+<?define version = "101.0.4843"?>
+<?define publisher = "letsdoautomation"?>
+<?define guid = "64e51933-5ba1-4008-b039-b5243f50e3a3"?>
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+        <Package Name="$(var.name)" Manufacturer="$(var.publisher)" Version="$(var.version)"
+                UpgradeCode="$(var.guid)" Scope="perMachine">
+
+                <Media Id="1" Cabinet="setup.cab" EmbedCab="yes" />
+
+                <Feature Id="InstallFeature" Title="Install Feature">
+                        <ComponentRef Id="component" />
+                </Feature>
+
+                <CustomAction Id="run_exe" Return="ignore" Execute="deferred"
+                        ExeCommand="$(var.exe) $(var.silentArgs)" HideTarget="no" Impersonate="no"
+                        FileRef="File0" />
+
+                <InstallExecuteSequence>
+                        <Custom Action="run_exe" After="InstallFiles"
+                                Condition="NOT REMOVE~=&quot;ALL&quot;" />
+                </InstallExecuteSequence>
+
+                <StandardDirectory Id="TempFolder">
+                        <Directory Id="INSTALLLOCATION" Name="$(var.guid)">
+                                <Component Id="component" DiskId="1" >
+                                        <File Id="File0" Name="$(var.exe)"
+                                                Source="$(var.path)\$(var.exe)" />
+                                </Component>
+                        </Directory>
+                </StandardDirectory>
+        </Package>
+</Wix>
