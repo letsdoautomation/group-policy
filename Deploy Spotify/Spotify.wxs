@@ -1,0 +1,39 @@
+<?define name = "Spotify"?>
+<?define exe = "SpotifySetup.exe"?>
+<?define path = "D:\Downloads"?>
+<?define version = "1.2.18"?>
+<?define publisher = "letsdoautomation"?>
+<?define guid = "8b1e469f-73e9-4798-9771-9e029d62816d"?>
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+        <Package Name="$(var.name)" Manufacturer="$(var.publisher)" Version="$(var.version)"
+                UpgradeCode="$(var.guid)" Scope="perMachine">
+
+                <Media Id="1" Cabinet="setup.cab" EmbedCab="yes" />
+
+                <Feature Id="InstallFeature" Title="Install Feature">
+                        <ComponentRef Id="component" />
+                        <ComponentRef Id="registry" />
+                </Feature>
+
+                <CustomAction Id="run_exe" Return="ignore" Execute="deferred"
+                        ExeCommand="$(var.exe)" HideTarget="no" Impersonate="no"
+                        FileRef="File0" />
+
+                <StandardDirectory Id="CommonAppDataFolder">
+                        <Directory Id="INSTALLLOCATION" Name="deployment_files\$(var.name)\{$(var.guid)}">
+                                <Component Id="component" DiskId="1" >
+                                        <File Id="File0" Name="$(var.exe)"
+                                                Source="$(var.path)\$(var.exe)" />
+                                </Component>
+                                <Component Id="registry">
+                                        <RegistryKey Root="HKLM"
+                                                Key="SOFTWARE\Microsoft\Active Setup\Installed Components\{$(var.guid)}">
+                                                <RegistryValue Type="string" Value="$(var.name) deployment"/>
+                                                <RegistryValue Name="StubPath" Type="string" Value="[INSTALLLOCATION]$(var.exe)"/>
+                                        </RegistryKey>
+                                </Component>
+                        </Directory>
+                </StandardDirectory>
+        </Package>
+</Wix>
