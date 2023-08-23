@@ -1,6 +1,6 @@
 ## Documentation and download
 Download link: [Cyberduk](https://cyberduck.io/download/) <br />
-Documentation link: N/A <br />
+Download link: [Cyberduck MSI/Documentation](https://docs.cyberduck.io/cyberduck/faq/) <br />
 
 ## Path to File policy settings
 
