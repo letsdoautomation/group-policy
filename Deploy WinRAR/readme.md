@@ -4,7 +4,7 @@ Documentation link: N/A <br />
 
 #### wix build command
 ```powershell
-wix build winrar.wxs
+wix build WinRAR.wxs
 ```
 
 ### My enviroment setup
