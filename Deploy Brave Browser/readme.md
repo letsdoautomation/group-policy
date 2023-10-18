@@ -24,12 +24,15 @@ Documentation link:  N/A
 <b>Hive:</b> HKEY_CURRENT_USER\\<b>Software\BraveSoftware\Brave-Browser</b> does not exist
 
 # Related videos
+
 <b>Windows registry</b>
 
 [Windows Registry: Run and RunOnce](https://youtu.be/zgFzCq5uEPw) <br />
+
 <b>Creating MSI</b>
 
 [Silent software installation: Brave Browser](https://youtu.be/ZrYFDhK8wjk)<br />
+
 <b>My windows server setup</b>
 
 [Windows Server 2022: Install File Server role and prepare a share for software deployment with GPO](https://youtu.be/jEWSdC2qwyA) <br />
