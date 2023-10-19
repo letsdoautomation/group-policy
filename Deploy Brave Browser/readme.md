@@ -1,4 +1,4 @@
-# Documentation and download
+# Group Policy Software Deployment
 Download link: [Brave](https://github.com/brave/brave-browser) <br />
 Documentation link:  N/A
 
@@ -8,9 +8,11 @@ Documentation link:  N/A
 <b>Source File(s):</b> \\\\srv02\software\Brave\BraveBrowserStandaloneSilentSetup.exe <br />
 <b>Destination File:</b> %CommonAppdataDir%\deployment\brave\BraveBrowserStandaloneSilentSetup.exe
 
-### File Deployment Item-level targeting
-<b>Registry Match</b>: <br />
-<b>Hive:</b> HKEY_CURRENT_USER\\<b>Software\BraveSoftware\Brave-Browser</b> does not exist
+### Item-level targeting
+<b>Registry Match</b><br />
+<b>Match type:</b> Key Exists then switch to (does not exist) <br />
+<b>Hive:</b> HKEY_CURRENT_USER <br />
+<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\BraveSoftware Brave-Browser
 
 ## Registry Deployment
 <b>Hive:</b> HKEY_CURRENT_USER <br />
@@ -19,9 +21,11 @@ Documentation link:  N/A
 <b>Value Type: </b> REG_SZ <br />
 <b>Value Data: </b> %CommonAppdataDir%\deployment\brave\BraveBrowserStandaloneSilentSetup.exe
 
-### File Deployment Item-level targeting
-<b>Registry Match</b>: <br />
-<b>Hive:</b> HKEY_CURRENT_USER\\<b>Software\BraveSoftware\Brave-Browser</b> does not exist
+### Item-level targeting
+<b>Registry Match</b><br />
+<b>Match type:</b> Key Exists then switch to (does not exist) <br />
+<b>Hive:</b> HKEY_CURRENT_USER <br />
+<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\BraveSoftware Brave-Browser
 
 # Related videos
 
@@ -31,7 +35,7 @@ Documentation link:  N/A
 
 <b>Creating MSI</b>
 
-[Silent software installation: Brave Browser](https://youtu.be/ZrYFDhK8wjk)<br />
+[WiX toolset 4 CLI: Create Brave Browser MSI installation file](https://youtu.be/zZyS3LLuy5Q)<br />
 
 <b>My windows server setup</b>
 

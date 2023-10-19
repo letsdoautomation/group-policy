@@ -1,32 +1,31 @@
 # Group Policy Software Deployment
 <b>Download links:</b> <br /> 
-* [Spotify](https://www.spotify.com/de-en/download/windows/) <br />
-* [Spotify Offline Installer](https://download.scdn.co/SpotifyFullSetup.exe)
+* [Ryver](https://ryver.com/downloads/)
 
 # Policy settings
 ## File Deployment
 <b>Action:</b> Update <br />
-<b>Source File(s):</b> \\\\srv02\software\Spotify\SpotifyFullSetup.exe <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment\Spotify\SpotifyFullSetup.exe
+<b>Source File(s):</b> \\\\srv02\software\Ryver\RyverSetup-1.3.2-x64.exe <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\Ryver\RyverSetup-1.3.2-x64.exe
 
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_CURRENT_USER <br />
-<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\Spotify
+<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\ryver
 
 ## Registry Deployment
 <b>Hive:</b> HKEY_CURRENT_USER <br />
 <b>Key Path: </b> Software\Microsoft\Windows\CurrentVersion\RunOnce <br />
-<b>Value Name: </b> InstallSpotify <br />
+<b>Value Name: </b> InstallRyver <br />
 <b>Value Type: </b> REG_SZ <br />
-<b>Value Data: </b> %CommonAppdataDir%\deployment\Spotify\SpotifyFullSetup.exe /Silent
+<b>Value Data: </b> %CommonAppdataDir%\deployment\Ryver\RyverSetup-1.3.2-x64.exe -s
 
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_CURRENT_USER <br />
-<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\Spotify
+<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\ryver
 
 # Related videos
 
@@ -36,7 +35,7 @@
 
 <b>Creating MSI</b>
 
-[WiX toolset 4 CLI: Create Spotify MSI installation file](https://youtu.be/f8CWgrtAYwM)<br />
+[WiX toolset 4 CLI: Create Ryver MSI installation file](https://youtu.be/xEidNdMOR5A)<br />
 
 <b>My windows server setup</b>
 
