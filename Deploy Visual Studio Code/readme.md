@@ -19,7 +19,7 @@
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_CURRENT_USER <br />
-<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\{771FD6B0-FA20-440A-A002-3B3BAC16DC50}_is1
+<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\\{771FD6B0-FA20-440A-A002-3B3BAC16DC50}_is1
 
 ## Registry Deployment
 <b>Hive:</b> HKEY_CURRENT_USER <br />
@@ -32,7 +32,7 @@
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_CURRENT_USER <br />
-<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\{771FD6B0-FA20-440A-A002-3B3BAC16DC50}_is1
+<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\\{771FD6B0-FA20-440A-A002-3B3BAC16DC50}_is1
 
 # Related videos
 
