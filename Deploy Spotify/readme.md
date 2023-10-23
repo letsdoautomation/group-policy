@@ -3,6 +3,13 @@
 * [Spotify](https://www.spotify.com/de-en/download/windows/) <br />
 * [Spotify Offline Installer](https://download.scdn.co/SpotifyFullSetup.exe)
 
+# Deployment setup
+* Create Group Policy
+    * Deploy installation exe to C:\programdata\deployment
+        * Setup Item-Level targeting
+    * Deploy RunOnce registry entry
+        * Setup Item-Level targeting
+
 # Policy settings
 ## File Deployment
 <b>Action:</b> Update <br />

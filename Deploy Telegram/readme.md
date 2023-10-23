@@ -8,6 +8,13 @@
 <b>Source File(s):</b> \\\\srv02\software\Telegram\tsetup-x64.4.10.2.exe <br />
 <b>Destination File:</b> %CommonAppdataDir%\deployment\Telegram\tsetup-x64.4.10.2.exe
 
+# Deployment setup
+* Create Group Policy
+    * Deploy installation exe to C:\programdata\deployment
+        * Setup Item-Level targeting
+    * Deploy RunOnce registry entry
+        * Setup Item-Level targeting
+
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />

@@ -2,6 +2,13 @@
 <b>Download links:</b> <br /> 
 * [Ryver](https://ryver.com/downloads/)
 
+# Deployment setup
+* Create Group Policy
+    * Deploy installation exe to C:\programdata\deployment
+        * Setup Item-Level targeting
+    * Deploy RunOnce registry entry
+        * Setup Item-Level targeting
+
 # Policy settings
 ## File Deployment
 <b>Action:</b> Update <br />

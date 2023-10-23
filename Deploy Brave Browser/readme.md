@@ -2,6 +2,13 @@
 Download link: [Brave](https://github.com/brave/brave-browser) <br />
 Documentation link:  N/A
 
+# Deployment setup
+* Create Group Policy
+    * Deploy installation exe to C:\programdata\deployment
+        * Setup Item-Level targeting
+    * Deploy RunOnce registry entry
+        * Setup Item-Level targeting
+
 # Policy settings
 ## File Deployment
 <b>Action:</b> Update <br />
