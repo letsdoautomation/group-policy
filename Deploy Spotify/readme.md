@@ -6,9 +6,9 @@
 # Deployment setup
 * Create Group Policy
     * Deploy installation exe to C:\programdata\deployment
-        * Setup Item-Level targeting
+        * Set Item-Level targeting
     * Deploy RunOnce registry entry
-        * Setup Item-Level targeting
+        * Set Item-Level targeting
 
 # Policy settings
 ## File Deployment
