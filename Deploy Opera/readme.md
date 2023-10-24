@@ -12,8 +12,8 @@
 # Policy settings
 ## File Deployment
 <b>Action:</b> Update <br />
-<b>Source File(s):</b> \\\\srv02\software\Opera\Opera_103.0.4928.34_Setup_x64.exe <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment\Opera\Opera_103.0.4928.34_Setup_x64.exe
+<b>Source File(s):</b> \\\\srv02\software\Opera\Opera_104.0.4944.23_Setup_x64.exe <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\Opera\Opera_104.0.4944.23_Setup_x64.exe
 
 ### Item-level targeting
 <b>Registry Match</b><br />
@@ -26,7 +26,7 @@
 <b>Key Path: </b> Software\Microsoft\Windows\CurrentVersion\RunOnce <br />
 <b>Value Name: </b> InstallOpera <br />
 <b>Value Type: </b> REG_SZ <br />
-<b>Value Data: </b> %CommonAppdataDir%\deployment\Opera\Opera_103.0.4928.34_Setup_x64.exe --silent=1 --launchbrowser=0
+<b>Value Data: </b> %CommonAppdataDir%\deployment\Opera\Opera_104.0.4944.23_Setup_x64.exe --silent=1 --launchbrowser=0
 
 ### Item-level targeting
 <b>Registry Match</b><br />
