@@ -2,18 +2,18 @@
 <b>Download links:</b> <br /> 
 * [Telegram](https://desktop.telegram.org/)
 
-# Policy settings
-## File Deployment
-<b>Action:</b> Update <br />
-<b>Source File(s):</b> \\\\srv02\software\Telegram\tsetup-x64.4.10.2.exe <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment\Telegram\tsetup-x64.4.10.2.exe
-
 # Deployment setup
 * Create Group Policy
     * Deploy installation exe to C:\programdata\deployment
         * Set Item-Level targeting
     * Deploy RunOnce registry entry
         * Set Item-Level targeting
+     
+# Policy settings
+## File Deployment
+<b>Action:</b> Update <br />
+<b>Source File(s):</b> \\\\srv02\software\Telegram\tsetup-x64.4.10.2.exe <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\Telegram\tsetup-x64.4.10.2.exe
 
 ### Item-level targeting
 <b>Registry Match</b><br />
