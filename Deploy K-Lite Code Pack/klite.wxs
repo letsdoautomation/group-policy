@@ -1,8 +1,8 @@
 ﻿<?define name = "K-Lite Codec Pack"?>
-<?define exe = "K-Lite_Codec_Pack_1770_Standard.exe"?>
+<?define exe = "K-Lite_Codec_Pack_1785_Standard.exe"?>
 <?define path = "D:\Downloads"?>
 <?define silentArgs = "/VERYSILENT /NORESTART"?>
-<?define version = "17.7.0"?>
+<?define version = "17.8.5"?>
 <?define publisher = "letsdoautomation"?>
 <?define guid = "dcf35909-8106-4c0f-89bc-6e8a4d308894"?>
 

@@ -1,5 +1,5 @@
 ﻿<?define name = "SumatraPDF"?>
-<?define exe = "SumatraPDF-3.4.6-64-install.exe"?>
+<?define exe = "SumatraPDF-3.5.2-64-install.exe"?>
 <?define path = "D:\Downloads"?>
 <?define silentArgs = "-s -all-users"?>
 <?define version = "3.4.6"?>

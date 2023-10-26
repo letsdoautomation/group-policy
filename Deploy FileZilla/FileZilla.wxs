@@ -1,8 +1,8 @@
 <?define name = "FileZilla"?>
-<?define exe = "FileZilla_3.65.0_win64_sponsored2-setup.exe"?>
+<?define exe = "FileZilla_3.66.0_win64_sponsored2-setup.exe"?>
 <?define path = "D:\Downloads"?>
 <?define silentArgs = "/S"?>
-<?define version = "3.65.0"?>
+<?define version = "3.66.0"?>
 <?define publisher = "letsdoautomation"?>
 <?define guid = "b736ac5a-77a6-4341-8dff-87ed4c2faa80"?>
 
