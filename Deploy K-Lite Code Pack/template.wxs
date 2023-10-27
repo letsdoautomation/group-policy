@@ -1,6 +1,7 @@
-<?define name = ""?>
+﻿<?define name = ""?>
 <?define exe = ""?>
 <?define path = ""?>
+<?define silentArgs = ""?>
 <?define version = ""?>
 <?define publisher = ""?>
 <?define guid = ""?>
@@ -12,21 +13,23 @@
                 <Media Id="1" Cabinet="setup.cab" EmbedCab="yes" />
 
                 <Feature Id="InstallFeature" Title="Install Feature">
-                        <ComponentRef Id="File" />
-                        <ComponentRef Id="RegistryEntries" />
+                        <ComponentRef Id="file" />
                 </Feature>
 
-                <StandardDirectory Id="CommonAppDataFolder">
-                        <Directory Id="INSTALLLOCATION" Name="_packages\$(var.guid)">
-                                <Component Id="File" DiskId="1" >
-                                        <File Id="File0" Name="$(var.exe)"
+                <CustomAction Id="run_exe" Return="asyncWait" Execute="commit"
+                        ExeCommand="$(var.silentArgs)" HideTarget="yes" Impersonate="no"
+                        FileRef="executable" />
+
+                <InstallExecuteSequence>
+                        <Custom Action="run_exe" After="InstallFiles"
+                                Condition="NOT Installed AND NOT REMOVE" />
+                </InstallExecuteSequence>
+
+                <StandardDirectory Id="TempFolder">
+                        <Directory Id="INSTALLLOCATION" Name="$(var.guid)">
+                                <Component Id="file" DiskId="1">
+                                        <File Id="executable" Name="$(var.exe)"
                                                 Source="$(var.path)\$(var.exe)" />
-                                </Component>
-                                <Component Id="RegistryEntries">
-                                        <RegistryKey Root="HKLM" Key="SOFTWARE\Microsoft\Active Setup\Installed Components\{$(var.guid)}">
-                                                <RegistryValue Type="string" Value="$(var.name)"/>
-                                                <RegistryValue Name="StubPath" Type="string" Value='REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce" /v "$(var.name)" /t REG_SZ /d "[INSTALLLOCATION]$(var.exe)"'/>
-                                        </RegistryKey>
                                 </Component>
                         </Directory>
                 </StandardDirectory>
