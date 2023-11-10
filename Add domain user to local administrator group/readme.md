@@ -1,0 +1,1 @@
+# Group Policy: Add domain user to local administrator group
