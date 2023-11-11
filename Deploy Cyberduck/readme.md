@@ -1,80 +1,70 @@
+# Group Policy: Deploy Cyberduck
 ## Documentation and download
-Download link: [Cyberduk](https://cyberduck.io/download/) <br />
-Download link: [Cyberduck MSI/Documentation](https://docs.cyberduck.io/cyberduck/faq/) <br />
+<b>Download links:</b><br /> 
 
-## Path to File policy settings
+* [Cyberduck](https://cyberduck.io/download/)
 
-<b>Policy path:</b> Computer Configuration > Preferences > Windows Settings > Files <br />
+# Deployment setup
+* Create Group Policy
+    * Deploy installation exe to C:\programdata\deployment
+        * Set Item-Level targeting
+    * Deploy run.ps1 to C:\programdata\deployment
+        * Set Item-Level targeting
+    * Deploy scheduled task
+        * Set Item-Level targeting
+    * Remove scheduled task
+        * Set Item-Level targeting
 
-## For setup file deployment
+## .EXE deployment
+<b>Action:</b> Update <br />
+<b>Source File(s):</b> \\\\srv02\software\cyberduck\Cyberduck-Installer-8.7.1.40770.exe <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\cyberduck\Cyberduck-Installer-8.7.1.40770.exe
 
-<b>Source file(s):</b> \\\\srv02\software\cyberduck\Cyberduck-Installer-8.6.3.40040.exe <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment_files\cyberduck\Cyberduck-Installer-8.6.3.40040.exe <br />
-
-<img src="img/2023-08-17 18_31_06-srv01 - VMware Workstation.png" width=40% height=40%>
-
-#### Item-level targeting
+### Item-level targeting
+<b>Registry Match</b><br />
+<b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Cyberduck <br />
+<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
 
-<img src="img/2023-08-17 18_31_32-srv01 - VMware Workstation.png" width=40% height=40%>
+## run.ps1 deployment
+<b>Action:</b> Update <br />
+<b>Source File(s):</b> \\\\srv02\software\cyberduck\run.ps1 <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\cyberduck\run.ps1
 
-## For script file deployment
-
-<b>Policy path:</b> Computer Configuration > Preferences > Windows Settings > Files <br />
-
-<b>Source file(s):</b> \\\\srv02\software\cyberduck\run.ps1 <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment_files\cyberduck\run.ps1 <br />
-
-<img src="img/2023-08-17 19_09_35-srv01 - VMware Workstation.png" width=40% height=40%>
-
-#### Item-level targeting
+### Item-level targeting
+<b>Registry Match</b><br />
+<b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Cyberduck <br />
+<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
 
-<img src="img/2023-08-17 18_31_32-srv01 - VMware Workstation.png" width=40% height=40%>
-
-## Path to Scheduled Tasks policy settings
-
-<b>Policy path:</b> Computer Configuration > Preferences > Control Panel Settings > Scheduled Tasks <br />
-
-## For Scheduled Tasks deployment
-
-<b>Name:</b> Deploy Cyberduck <br />
+## Scheduled Task deployment
+<b>Name:</b> Deploy cyberduck <br />
 <b>When runing the task, use the following user account:</b> NT AUTHORITY\System
 
-<img src="img/2023-08-17 20_40_18-srv01 - VMware Workstation.png" width=40% height=40%>
+### Trigger
+<b>Begin the task:</b> At startup
 
-<img src="img/2023-08-17 20_41_04-srv01 - VMware Workstation.png" width=40% height=40%>
-
-#### Action
-
+### Action
 <b>Program/Script:</b> powershell.exe <br />
-<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment_files\cyberduck\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment_files\cyberduck\Cyberduck-Installer-8.6.3.40040.exe" -ArgumentList "/quiet" -Registry "HKLM:\SOFTWARE\Cyberduck" <br />
+<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment\cyberduck\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment\cyberduck\Cyberduck-Installer-8.7.1.40770.exe" -ArgumentList "/quiet" -Registry "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}" <br />
 
-<img src="img/2023-08-17 20_45_28-srv01 - VMware Workstation.png" width=40% height=40%>
-
-#### Item-level targeting
+### Item-level targeting
+<b>Registry Match</b><br />
+<b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Cyberduck <br />
+<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
 
-<img src="img/2023-08-17 18_31_32-srv01 - VMware Workstation.png" width=40% height=40%>
+# Related videos
 
-## For Scheduled Tasks removal
+<b>Group Policy and settings that i have configured in my servers and clients</b>
 
-#### Item-level targeting
-<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Cyberduck <br />
-
-<img src="img/2023-08-17 21_27_42-srv01 - VMware Workstation.png" width=40% height=40%>
-
-## My enviroment setup
-Group Policy and settings that i have configured in my servers and clients <br />
 [Group Policy: Creating 32 and 64 bit WMI filters](https://youtu.be/ffBIiQaVXGM) <br />
 [Group Policy: Always Wait for the Network at Computer Startup and Logon](https://youtu.be/8BF0rU7peNk) <br />
 [Group Policy: Display highly detailed status messages](https://youtu.be/2LB51n4O1Lk) <br />
 [Group Policy: Create an "Install a Program from the Network" desktop shortcut](https://youtu.be/s_pMiG0F0ho) <br />
-My windows server setup: <br />
+
+<b>My windows server setup</b>
+
 [Windows Server 2022: Install File Server role and prepare a share for software deployment with GPO](https://youtu.be/jEWSdC2qwyA) <br />
 [Windows Server 2022: Install DHCP server](https://youtu.be/8n0MD9stQis) <br />
 [Windows Server 2022: Install Active Directory Domain Services (AD DS)](https://youtu.be/1cYewbW3Tl0) <br />

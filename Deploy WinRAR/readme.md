@@ -1,5 +1,6 @@
 # Group Policy Software Deployment
-<b>Download links:</b><br /> 
+<b>Download links:</b><br />
+
 * [WinRAR](https://www.win-rar.com/download.html?&L=0)<br />
 
 <b>silent switch:</b>

@@ -1,96 +1,74 @@
+# Group Policy: Deploy Python 3
 ## Documentation and download
-Download link: [Python 3](https://www.python.org/downloads/) <br />
-Documentation link: [Documentation](https://docs.python.org/3/using/windows.html#installing-without-ui)
+<b>Download links:</b><br /> 
 
-## Path to File policy settings
+* [Python 3](https://www.python.org/downloads/)
 
-<b>Policy path:</b> Computer Configuration > Preferences > Windows Settings > Files <br />
+<Documentation>
 
-## For setup file deployment
+* [Documentation](https://docs.python.org/3/using/windows.html#installing-without-ui)
 
-<b>Source file(s):</b> \\\\srv02\software\python\python-3.11.4-amd64.exe <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment_files\python\python-3.11.4-amd64.exe<br />
+# Deployment setup
+* Create Group Policy
+    * Deploy installation exe to C:\programdata\deployment
+        * Set Item-Level targeting
+    * Deploy run.ps1 to C:\programdata\deployment
+        * Set Item-Level targeting
+    * Deploy scheduled task
+        * Set Item-Level targeting
+    * Remove scheduled task
+        * Set Item-Level targeting
 
-<img src="img/1.png" width=40% height=40%>
+## .EXE deployment
+<b>Action:</b> Update <br />
+<b>Source File(s):</b> \\\\srv02\software\python\python-3.12.0-amd64.exe <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\python\python-3.12.0-amd64.exe
 
-#### Item-level targeting
+### Item-level targeting
+<b>Registry Match</b><br />
+<b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\WOW6432Node\Python <br />
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{14BBD330-AA3F-4F7A-8A39-DFB28AECFA82}
 
-##### AND
+## run.ps1 deployment
+<b>Action:</b> Update <br />
+<b>Source File(s):</b> \\\\srv02\software\python\run.ps1 <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\python\run.ps1
+
+### Item-level targeting
+<b>Registry Match</b><br />
+<b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Python <br />
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{14BBD330-AA3F-4F7A-8A39-DFB28AECFA82}
 
-
-<img src="img/2.png" width=40% height=40%>
-
-## For script file deployment
-<b>Policy path:</b> Computer Configuration > Preferences > Windows Settings > Files <br />
-
-<b>Source file(s):</b> \\\\srv02\software\python\run.ps1 <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment_files\python\run.ps1 <br />
-
-<img src="img/3.png" width=40% height=40%>
-
-#### Item-level targeting
-<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\WOW6432Node\Python <br />
-
-##### AND
-<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Python <br />
-
-<img src="img/2.png" width=40% height=40%>
-
-## Path to Scheduled Tasks policy settings
-
-<b>Policy path:</b> Computer Configuration > Preferences > Control Panel Settings > Scheduled Tasks <br />
-
-## For Scheduled Tasks deployment
-
-<b>Name:</b> Deploy Python 3<br />
+## Scheduled Task deployment
+<b>Name:</b> Deploy python <br />
 <b>When runing the task, use the following user account:</b> NT AUTHORITY\System
 
-<img src="img/4.png" width=40% height=40%>
+### Trigger
+<b>Begin the task:</b> At startup
 
-<img src="img/5.png" width=40% height=40%>
-
-#### Action
-
+### Action
 <b>Program/Script:</b> powershell.exe <br />
-<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment_files\python\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment_files\python\python-3.11.4-amd64.exe" -ArgumentList "/quiet InstallAllUsers=1 PrependPath=1" -Registry "HKLM:\SOFTWARE\Python,HKLM:\SOFTWARE\WOW6432Node\Python" <br />
+<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment\python\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment\python\python-3.12.0-amd64.exe" -ArgumentList "/quiet InstallAllUsers=1 PrependPath=1" -Registry "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{14BBD330-AA3F-4F7A-8A39-DFB28AECFA82}" <br />
 
-<img src="img/6.png" width=40% height=40%>
-
-#### Item-level targeting
+### Item-level targeting
+<b>Registry Match</b><br />
+<b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\WOW6432Node\Python <br />
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{14BBD330-AA3F-4F7A-8A39-DFB28AECFA82}
 
-##### AND
-<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Python <br />
+# Related videos
 
-<img src="img/2.png" width=40% height=40%>
+<b>Group Policy and settings that i have configured in my servers and clients</b>
 
-## For Scheduled Tasks removal
-
-#### Item-level targeting
-<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\WOW6432Node\Python <br />
-
-##### OR
-<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Python <br />
-
-<img src="img/7.png" width=40% height=40%>
-
-## My enviroment setup
-Group Policy and settings that i have configured in my servers and clients <br />
 [Group Policy: Creating 32 and 64 bit WMI filters](https://youtu.be/ffBIiQaVXGM) <br />
 [Group Policy: Always Wait for the Network at Computer Startup and Logon](https://youtu.be/8BF0rU7peNk) <br />
 [Group Policy: Display highly detailed status messages](https://youtu.be/2LB51n4O1Lk) <br />
 [Group Policy: Create an "Install a Program from the Network" desktop shortcut](https://youtu.be/s_pMiG0F0ho) <br />
-My windows server setup: <br />
+
+<b>My windows server setup</b>
+
 [Windows Server 2022: Install File Server role and prepare a share for software deployment with GPO](https://youtu.be/jEWSdC2qwyA) <br />
 [Windows Server 2022: Install DHCP server](https://youtu.be/8n0MD9stQis) <br />
 [Windows Server 2022: Install Active Directory Domain Services (AD DS)](https://youtu.be/1cYewbW3Tl0) <br />

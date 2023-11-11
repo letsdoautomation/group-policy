@@ -1,96 +1,70 @@
+# Group Policy: Deploy Dropbox
 ## Documentation and download
-Download link: [Dropbox](https://help.dropbox.com/installs/enterprise-installer) <br />
-Documentation link: N/A <br />
+<b>Download links:</b><br /> 
 
-## Path to File policy settings
+* [Dropbox](https://help.dropbox.com/installs/enterprise-installer)
 
-<b>Policy path:</b> Computer Configuration > Preferences > Windows Settings > Files <br />
+# Deployment setup
+* Create Group Policy
+    * Deploy installation exe to C:\programdata\deployment
+        * Set Item-Level targeting
+    * Deploy run.ps1 to C:\programdata\deployment
+        * Set Item-Level targeting
+    * Deploy scheduled task
+        * Set Item-Level targeting
+    * Remove scheduled task
+        * Set Item-Level targeting
 
-## For setup file deployment
+## .EXE deployment
+<b>Action:</b> Update <br />
+<b>Source File(s):</b> \\\\srv02\software\dropbox\Dropbox 186.4.6207 Offline Installer.x86.exe <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\dropbox\Dropbox 186.4.6207 Offline Installer.x86.exe
 
-<b>Source file(s):</b> \\\\srv02\software\dropbox\Dropbox 180.4.4912 Offline Installer.x86.exe <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment_files\dropbox\Dropbox 180.4.4912 Offline Installer.x86.exe<br />
-
-<img src="img/2023-08-18 19_41_03-srv01 - VMware Workstation.png" width=40% height=40%>
-
-#### Item-level targeting
+### Item-level targeting
+<b>Registry Match</b><br />
+<b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\WOW6432Node\Dropbox <br />
+<b>Key Path:</b> SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Dropbox
 
-##### AND
+## run.ps1 deployment
+<b>Action:</b> Update <br />
+<b>Source File(s):</b> \\\\srv02\software\dropbox\run.ps1 <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\dropbox\run.ps1
+
+### Item-level targeting
+<b>Registry Match</b><br />
+<b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Dropbox <br />
+<b>Key Path:</b> SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Dropbox
 
-
-<img src="img/2023-08-18 19_42_52-srv01 - VMware Workstation.png" width=40% height=40%>
-
-## For script file deployment
-<b>Policy path:</b> Computer Configuration > Preferences > Windows Settings > Files <br />
-
-<b>Source file(s):</b> \\\\srv02\software\dropbox\run.ps1 <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment_files\dropbox\run.ps1 <br />
-
-<img src="img/2023-08-18 19_47_58-srv01 - VMware Workstation.png" width=40% height=40%>
-
-#### Item-level targeting
-<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\WOW6432Node\Dropbox <br />
-
-##### AND
-<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Dropbox <br />
-
-<img src="img/2023-08-18 19_42_52-srv01 - VMware Workstation.png" width=40% height=40%>
-
-## Path to Scheduled Tasks policy settings
-
-<b>Policy path:</b> Computer Configuration > Preferences > Control Panel Settings > Scheduled Tasks <br />
-
-## For Scheduled Tasks deployment
-
+## Scheduled Task deployment
 <b>Name:</b> Deploy dropbox <br />
 <b>When runing the task, use the following user account:</b> NT AUTHORITY\System
 
-<img src="img/2023-08-18 19_50_46-srv01 - VMware Workstation.png" width=40% height=40%>
+### Trigger
+<b>Begin the task:</b> At startup
 
-<img src="img/2023-08-18 19_51_17-srv01 - VMware Workstation.png" width=40% height=40%>
-
-#### Action
-
+### Action
 <b>Program/Script:</b> powershell.exe <br />
-<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment_files\dropbox\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment_files\dropbox\Dropbox 180.4.4912 Offline Installer.x86.exe" -ArgumentList "/NOLAUNCH" -Registry "HKLM:\SOFTWARE\Dropbox,HKLM:\SOFTWARE\WOW6432Node\Dropbox" <br />
+<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment\dropbox\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment\dropbox\Dropbox 186.4.6207 Offline Installer.x86.exe" -ArgumentList "/NOLAUNCH" -Registry "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Dropbox" <br />
 
-<img src="img/2023-08-18 21_02_49-srv01 - VMware Workstation.png" width=40% height=40%>
-
-#### Item-level targeting
+### Item-level targeting
+<b>Registry Match</b><br />
+<b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\WOW6432Node\Dropbox <br />
+<b>Key Path:</b> SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Dropbox
 
-##### AND
-<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Dropbox <br />
+# Related videos
 
-<img src="img/2023-08-18 19_42_52-srv01 - VMware Workstation.png" width=40% height=40%>
+<b>Group Policy and settings that i have configured in my servers and clients</b>
 
-## For Scheduled Tasks removal
-
-#### Item-level targeting
-<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\WOW6432Node\Dropbox <br />
-
-##### OR
-<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key path:</b> SOFTWARE\Dropbox <br />
-
-<img src="img/2023-08-18 20_52_24-srv01 - VMware Workstation.png" width=40% height=40%>
-
-## My enviroment setup
-Group Policy and settings that i have configured in my servers and clients <br />
 [Group Policy: Creating 32 and 64 bit WMI filters](https://youtu.be/ffBIiQaVXGM) <br />
 [Group Policy: Always Wait for the Network at Computer Startup and Logon](https://youtu.be/8BF0rU7peNk) <br />
 [Group Policy: Display highly detailed status messages](https://youtu.be/2LB51n4O1Lk) <br />
 [Group Policy: Create an "Install a Program from the Network" desktop shortcut](https://youtu.be/s_pMiG0F0ho) <br />
-My windows server setup: <br />
+
+<b>My windows server setup</b>
+
 [Windows Server 2022: Install File Server role and prepare a share for software deployment with GPO](https://youtu.be/jEWSdC2qwyA) <br />
 [Windows Server 2022: Install DHCP server](https://youtu.be/8n0MD9stQis) <br />
 [Windows Server 2022: Install Active Directory Domain Services (AD DS)](https://youtu.be/1cYewbW3Tl0) <br />
