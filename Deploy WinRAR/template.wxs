@@ -1,4 +1,4 @@
-﻿<?define name = ""?>
+<?define name = ""?>
 <?define exe = ""?>
 <?define path = ""?>
 <?define silentArgs = ""?>
@@ -14,6 +14,7 @@
 
                 <Feature Id="InstallFeature" Title="Install Feature">
                         <ComponentRef Id="file" />
+                        <ComponentRef Id="RegistryEntries" />
                 </Feature>
 
                 <CustomAction Id="run_exe" Return="asyncWait" Execute="commit"
@@ -30,6 +31,12 @@
                                 <Component Id="file" DiskId="1">
                                         <File Id="executable" Name="$(var.exe)"
                                                 Source="$(var.path)\$(var.exe)" />
+                                </Component>
+                                <Component Id="RegistryEntries">
+                                        <RegistryKey Root="HKLM" Key="SOFTWARE\Microsoft\Active Setup\Installed Components\{$(var.guid)}">
+                                                <RegistryValue Type="string" Value="$(var.name)"/>
+                                                <RegistryValue Name="StubPath" Type="string" Value='REG ADD "HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce" /v "$(var.name)" /t REG_SZ /d "[ProgramFiles64Folder]WinRAR\WinRAR.exe"'/>
+                                        </RegistryKey>
                                 </Component>
                         </Directory>
                 </StandardDirectory>
