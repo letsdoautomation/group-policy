@@ -8,6 +8,11 @@
 -s -all-users
 ```
 
+<b>Generate package guid</b>
+```powershell
+[guid]::NewGuid().guid
+```
+
 <b>wix build command:</b>
 ```powershell
 wix build sumatrapdf.wxs
