@@ -1,14 +1,14 @@
-# Group Policy: Deploy Python 3
+# Group Policy: Deploy PowerBI using Task Scheduler
 ## Documentation and download
 <b>Download links:</b><br /> 
 
-* [Python 3](https://www.python.org/downloads/)
+* [Power BI](https://www.microsoft.com/en-US/download/details.aspx?id=58494)
 
 <Documentation>
 
-* [Documentation](https://docs.python.org/3/using/windows.html#installing-without-ui)
+* [Documentation](https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-get-the-desktop#use-command-line-options-during-installation)
 
-# Deployment setup
+<b>Objectives:</b>
 * Create Group Policy
     * Deploy installation exe to C:\programdata\deployment
         * Set Item-Level targeting
@@ -21,28 +21,28 @@
 
 ## .EXE deployment
 <b>Action:</b> Update <br />
-<b>Source File(s):</b> \\\\srv02\software\python\python-3.12.0-amd64.exe <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment\python\python-3.12.0-amd64.exe
+<b>Source File(s):</b> \\\\srv02\software\powerbi\PBIDesktopSetup_x64.exe <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\powerbi\PBIDesktopSetup_x64.exe
 
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{14BBD330-AA3F-4F7A-8A39-DFB28AECFA82}
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0eca4084-8caa-4cbf-b6c9-616ad3638692}
 
 ## run.ps1 deployment
 <b>Action:</b> Update <br />
-<b>Source File(s):</b> \\\\srv02\software\python\run.ps1 <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment\python\run.ps1
+<b>Source File(s):</b> \\\\srv02\software\powerbi\run.ps1 <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\powerbi\run.ps1
 
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{14BBD330-AA3F-4F7A-8A39-DFB28AECFA82}
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0eca4084-8caa-4cbf-b6c9-616ad3638692}
 
 ## Scheduled Task deployment
-<b>Name:</b> Deploy python <br />
+<b>Name:</b> Deploy powerbi <br />
 <b>When runing the task, use the following user account:</b> NT AUTHORITY\System
 
 ### Trigger
@@ -50,13 +50,13 @@
 
 ### Action
 <b>Program/Script:</b> powershell.exe <br />
-<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment\python\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment\python\python-3.12.0-amd64.exe" -ArgumentList "/quiet InstallAllUsers=1 PrependPath=1" -Registry "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{14BBD330-AA3F-4F7A-8A39-DFB28AECFA82}" <br />
+<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment\powerbi\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment\powerbi\PBIDesktopSetup_x64.exe" -ArgumentList "-silent -norestart ACCEPT_EULA=1" -Registry "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0eca4084-8caa-4cbf-b6c9-616ad3638692}" <br />
 
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{14BBD330-AA3F-4F7A-8A39-DFB28AECFA82}
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0eca4084-8caa-4cbf-b6c9-616ad3638692}
 
 # Related videos
 

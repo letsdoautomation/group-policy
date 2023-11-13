@@ -1,14 +1,10 @@
-# Group Policy: Deploy PowerBI
+# Group Policy: Deploy Cyberduck using Task Scheduler
 ## Documentation and download
 <b>Download links:</b><br /> 
 
-* [Power BI](https://www.microsoft.com/en-US/download/details.aspx?id=58494)
+* [Cyberduck](https://cyberduck.io/download/)
 
-<Documentation>
-
-* [Documentation](https://learn.microsoft.com/en-us/power-bi/fundamentals/desktop-get-the-desktop#use-command-line-options-during-installation)
-
-# Deployment setup
+<b>Objectives:</b>
 * Create Group Policy
     * Deploy installation exe to C:\programdata\deployment
         * Set Item-Level targeting
@@ -21,28 +17,28 @@
 
 ## .EXE deployment
 <b>Action:</b> Update <br />
-<b>Source File(s):</b> \\\\srv02\software\powerbi\PBIDesktopSetup_x64.exe <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment\powerbi\PBIDesktopSetup_x64.exe
+<b>Source File(s):</b> \\\\srv02\software\cyberduck\Cyberduck-Installer-8.7.1.40770.exe <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\cyberduck\Cyberduck-Installer-8.7.1.40770.exe
 
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0eca4084-8caa-4cbf-b6c9-616ad3638692}
+<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
 
 ## run.ps1 deployment
 <b>Action:</b> Update <br />
-<b>Source File(s):</b> \\\\srv02\software\powerbi\run.ps1 <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment\powerbi\run.ps1
+<b>Source File(s):</b> \\\\srv02\software\cyberduck\run.ps1 <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\cyberduck\run.ps1
 
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0eca4084-8caa-4cbf-b6c9-616ad3638692}
+<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
 
 ## Scheduled Task deployment
-<b>Name:</b> Deploy powerbi <br />
+<b>Name:</b> Deploy cyberduck <br />
 <b>When runing the task, use the following user account:</b> NT AUTHORITY\System
 
 ### Trigger
@@ -50,13 +46,13 @@
 
 ### Action
 <b>Program/Script:</b> powershell.exe <br />
-<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment\powerbi\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment\powerbi\PBIDesktopSetup_x64.exe" -ArgumentList "-silent -norestart ACCEPT_EULA=1" -Registry "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0eca4084-8caa-4cbf-b6c9-616ad3638692}" <br />
+<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment\cyberduck\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment\cyberduck\Cyberduck-Installer-8.7.1.40770.exe" -ArgumentList "/quiet" -Registry "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}" <br />
 
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0eca4084-8caa-4cbf-b6c9-616ad3638692}
+<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
 
 # Related videos
 

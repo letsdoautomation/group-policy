@@ -1,10 +1,10 @@
-# Group Policy: Deploy Cyberduck
+# Group Policy: Deploy Dropbox using Task Scheduler
 ## Documentation and download
 <b>Download links:</b><br /> 
 
-* [Cyberduck](https://cyberduck.io/download/)
+* [Dropbox](https://help.dropbox.com/installs/enterprise-installer)
 
-# Deployment setup
+<b>Objectives:</b>
 * Create Group Policy
     * Deploy installation exe to C:\programdata\deployment
         * Set Item-Level targeting
@@ -17,28 +17,28 @@
 
 ## .EXE deployment
 <b>Action:</b> Update <br />
-<b>Source File(s):</b> \\\\srv02\software\cyberduck\Cyberduck-Installer-8.7.1.40770.exe <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment\cyberduck\Cyberduck-Installer-8.7.1.40770.exe
+<b>Source File(s):</b> \\\\srv02\software\dropbox\Dropbox 186.4.6207 Offline Installer.x86.exe <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\dropbox\Dropbox 186.4.6207 Offline Installer.x86.exe
 
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
+<b>Key Path:</b> SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Dropbox
 
 ## run.ps1 deployment
 <b>Action:</b> Update <br />
-<b>Source File(s):</b> \\\\srv02\software\cyberduck\run.ps1 <br />
-<b>Destination File:</b> %CommonAppdataDir%\deployment\cyberduck\run.ps1
+<b>Source File(s):</b> \\\\srv02\software\dropbox\run.ps1 <br />
+<b>Destination File:</b> %CommonAppdataDir%\deployment\dropbox\run.ps1
 
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
+<b>Key Path:</b> SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Dropbox
 
 ## Scheduled Task deployment
-<b>Name:</b> Deploy cyberduck <br />
+<b>Name:</b> Deploy dropbox <br />
 <b>When runing the task, use the following user account:</b> NT AUTHORITY\System
 
 ### Trigger
@@ -46,13 +46,13 @@
 
 ### Action
 <b>Program/Script:</b> powershell.exe <br />
-<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment\cyberduck\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment\cyberduck\Cyberduck-Installer-8.7.1.40770.exe" -ArgumentList "/quiet" -Registry "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}" <br />
+<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment\dropbox\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment\dropbox\Dropbox 186.4.6207 Offline Installer.x86.exe" -ArgumentList "/NOLAUNCH" -Registry "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Dropbox" <br />
 
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
+<b>Key Path:</b> SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Dropbox
 
 # Related videos
 
