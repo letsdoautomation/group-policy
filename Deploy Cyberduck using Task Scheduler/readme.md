@@ -24,7 +24,7 @@
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
 
 ## run.ps1 deployment
 <b>Action:</b> Update <br />
@@ -35,7 +35,7 @@
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
 
 ## Scheduled Task deployment
 <b>Name:</b> Deploy cyberduck <br />
@@ -46,13 +46,13 @@
 
 ### Action
 <b>Program/Script:</b> powershell.exe <br />
-<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment\cyberduck\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment\cyberduck\Cyberduck-Installer-8.7.1.40770.exe" -ArgumentList "/quiet" -Registry "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}" <br />
+<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment\cyberduck\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment\cyberduck\Cyberduck-Installer-8.7.1.40770.exe" -ArgumentList "/quiet" -Registry "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}" <br />
 
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\\{4FA801DC-E821-47F3-AD08-67DF41AA36DC}
 
 # Related videos
 
