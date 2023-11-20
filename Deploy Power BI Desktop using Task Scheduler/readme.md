@@ -28,7 +28,7 @@
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0eca4084-8caa-4cbf-b6c9-616ad3638692}
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\\\{0eca4084-8caa-4cbf-b6c9-616ad3638692}
 
 ## run.ps1 deployment
 <b>Action:</b> Update <br />
@@ -39,7 +39,7 @@
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0eca4084-8caa-4cbf-b6c9-616ad3638692}
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\\{0eca4084-8caa-4cbf-b6c9-616ad3638692}
 
 ## Scheduled Task deployment
 <b>Name:</b> Deploy powerbi <br />
@@ -50,13 +50,13 @@
 
 ### Action
 <b>Program/Script:</b> powershell.exe <br />
-<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment\powerbi\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment\powerbi\PBIDesktopSetup_x64.exe" -ArgumentList "-silent -norestart ACCEPT_EULA=1" -Registry "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0eca4084-8caa-4cbf-b6c9-616ad3638692}" <br />
+<b>Add arguments(optional):</b> -ExecutionPolicy Bypass -File %ALLUSERSPROFILE%\deployment\powerbi\run.ps1 -Exe "%ALLUSERSPROFILE%\deployment\powerbi\PBIDesktopSetup_x64.exe" -ArgumentList "-silent -norestart ACCEPT_EULA=1" -Registry "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\\{0eca4084-8caa-4cbf-b6c9-616ad3638692}" <br />
 
 ### Item-level targeting
 <b>Registry Match</b><br />
 <b>Match type:</b> Key Exists then switch to (does not exist) <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0eca4084-8caa-4cbf-b6c9-616ad3638692}
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\\{0eca4084-8caa-4cbf-b6c9-616ad3638692}
 
 # Related videos
 
