@@ -1,9 +1,10 @@
 ### Documentation and download
 Download link: [LibreOffice](https://www.libreoffice.org/download/download-libreoffice/) <br />
 Documentation link: [Documentation](https://wiki.documentfoundation.org/Deployment_and_Migration) <br />
-Orca: [Windows tools: Download and install Orca MSI file editor](https://youtu.be/dFKwxNZ8PXY)
 
-### My enviroment setup
+### Related Videos
+Windows tools <br />
+[Windows tools: Download and install Orca MSI file editor](https://youtu.be/dFKwxNZ8PXY)
 Group Policy and settings that i have configured in my servers and clients <br />
 [Group Policy: Creating 32 and 64 bit WMI filters](https://youtu.be/ffBIiQaVXGM) <br />
 [Group Policy: Always Wait for the Network at Computer Startup and Logon](https://youtu.be/8BF0rU7peNk) <br />
