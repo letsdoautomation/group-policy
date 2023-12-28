@@ -24,6 +24,8 @@ User Configuration -> Preferences -> Windows Settings -> Registry
 
 <b>Policy settings:</b>
 
+<b>Anction:</b> Update <br />
+<b>Hive:</b> HKEY_CURRENT_USER <br />
 <b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel <br />
 <b>Value Name:</b> {20D04FE0-3AEA-1069-A2D8-08002B30309D} <br />
 <b>Value Data:</b> 0 </br>

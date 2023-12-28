@@ -10,6 +10,8 @@ User Configuration -> Preferences -> Windows Settings -> Registry
 ```
 <b>Policy settings:</b>
 
+<b>Action:</b> Update <br />
+<b>Hive:</b> HKEY_CURRENT_USER <br />
 <b>Key Path:</b> Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32 <br />
 <b>Value Name:</b> True <br />
 <b>Value Data:</b>
