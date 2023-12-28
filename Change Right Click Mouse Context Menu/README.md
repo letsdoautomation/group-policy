@@ -15,7 +15,7 @@ User Configuration -> Preferences -> Windows Settings -> Registry
 <b>Value Data:</b>
 
 
-### My enviroment setup
+### Related videos
 
 <b>My windows server setup:</b> <br />
 
