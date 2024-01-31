@@ -1,10 +1,10 @@
-# Group Policy: Install ADMX files for managing Brave browser
+# Group Policy: Install ADMX files for managing Google Chrome browser
 
 <b>Download links:</b> <br /> 
 
-[Settings management - Group Policy](https://support.brave.com/hc/en-us/articles/360039248271-Group-Policy)<br />
+[Chrome browser for your enterprise](https://chromeenterprise.google/browser/download/?sjid=7847157302977987423-EU#windows-tab) <br />
 
-<b>Objective:</b> Install ADMX files for managing Brave browser
+<b>Objective:</b> Install ADMX files for managing Google Chrome browser
 
 
 <b>Install location:</b> <br />
