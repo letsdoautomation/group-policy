@@ -12,7 +12,7 @@
 * Local Computer:
     * C:\Windows\PolicyDefinitions
 * Central store:
-    * \\ad.letsdoautomation.com\SYSVOL\ad.letsdoautomation.com\Policies\PolicyDefinitions
+    * \\\\ad.letsdoautomation.com\SYSVOL\ad.letsdoautomation.com\Policies\PolicyDefinitions
 
 ### Related videos
 
