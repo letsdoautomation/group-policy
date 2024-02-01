@@ -1,10 +1,10 @@
-# Group Policy: Install ADMX files for managing Google Chrome browser
+# Group Policy: Install ADMX Policy Templates for managing Google Chrome browser
 
 <b>Download links:</b> <br /> 
 
 [Chrome browser for your enterprise](https://chromeenterprise.google/browser/download/?sjid=7847157302977987423-EU#windows-tab) <br />
 
-<b>Objective:</b> Install ADMX files for managing Google Chrome browser
+<b>Objective:</b> Install ADMX Policy Templates for managing Google Chrome browser
 
 
 <b>Install location:</b> <br />
