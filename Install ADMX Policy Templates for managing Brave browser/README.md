@@ -1,10 +1,10 @@
-# Group Policy: Install ADMX files for managing Brave browser
+# Group Policy: Install ADMX Policy Templates for managing Brave browser
 
 <b>Download links:</b> <br /> 
 
 [Settings management - Group Policy](https://support.brave.com/hc/en-us/articles/360039248271-Group-Policy)<br />
 
-<b>Objective:</b> Install ADMX files for managing Brave browser
+<b>Objective:</b> Install ADMX Policy Templates for managing Brave browser
 
 
 <b>Install location:</b> <br />
