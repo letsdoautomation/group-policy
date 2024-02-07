@@ -1,4 +1,4 @@
-# Group Policy: Install ADMX files for managing Mozilla Firefox browser
+# Group Policy: Install ADMX Policy Templates for managing Mozilla Firefox browser
 
 <b>Download links:</b> <br /> 
 
