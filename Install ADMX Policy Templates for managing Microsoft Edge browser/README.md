@@ -1,4 +1,4 @@
-# Group Policy: Install ADMX files for managing Microsoft Edge browser
+# Group Policy: Install ADMX Policy Templates for managing Microsoft Edge browser
 
 <b>Download links:</b> <br /> 
 
