@@ -9,6 +9,10 @@
 
 ### Related videos
 
+<b>Group Policy:</b> <br />
+
+[Group Policy: Install ADMX Policy Templates for managing Mozilla Firefox browser](https://youtu.be/CWpt81mB_8E)
+
 <b>My windows server setup:</b> <br />
 
 [Windows Server 2022: Install File Server role and prepare a share for software deployment with GPO](https://youtu.be/jEWSdC2qwyA) <br />

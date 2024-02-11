@@ -61,6 +61,10 @@
 
 ### Related videos
 
+<b>Group Policy:</b> <br />
+
+[Group Policy: Install ADMX Policy Templates for managing Brave browser](https://youtu.be/VFtB7Of6H-A)
+
 <b>My windows server setup:</b> <br />
 
 [Windows Server 2022: Install File Server role and prepare a share for software deployment with GPO](https://youtu.be/jEWSdC2qwyA) <br />

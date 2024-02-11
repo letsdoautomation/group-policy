@@ -14,6 +14,10 @@
 
 ### Related videos
 
+<b>Group Policy:</b> <br />
+
+[Group Policy: Install ADMX Policy Templates for managing Microsoft Edge browser](https://youtu.be/0l6GYaL_ToU)
+
 <b>My windows server setup:</b> <br />
 
 [Windows Server 2022: Install File Server role and prepare a share for software deployment with GPO](https://youtu.be/jEWSdC2qwyA) <br />
