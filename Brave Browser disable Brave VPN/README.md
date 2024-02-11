@@ -1,8 +1,8 @@
-# Group Policy: Brave Browser disable Brave Rewards
+# Group Policy: Brave Browser disable Brave VPN
 
 <b>Objectives:</b>
 
-* Brave Browser disable Brave Rewards
+* Brave Browser disable Brave VPN
 
 <b>Policy location:</b> Computer Configuration -> Preferences -> Windows Settings -> Registry
 
