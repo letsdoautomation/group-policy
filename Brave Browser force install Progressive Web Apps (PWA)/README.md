@@ -1,4 +1,4 @@
-Group Policy: Brave Browser force install Progressive Web Apps (PWA)
+# Group Policy: Brave Browser force install Progressive Web Apps (PWA)
 
 <b>Objective:</b>
 
