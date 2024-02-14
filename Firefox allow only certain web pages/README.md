@@ -24,9 +24,9 @@
 
 <b>Values:</b> 
 
-* *://*.google.com/*
+* *:///*.google.com/*
 * *://*.youtube.com/*
-* *://*.duckduckgo.com/*
+* *:///*.duckduckgo.com/*
 
 ### Related videos
 
