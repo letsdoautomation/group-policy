@@ -16,8 +16,8 @@
 
 <b>Values:</b>
 
-* *://*.facebook.com/*
-* *://*.instagram.com/*
+* \*://\*.facebook.com/*
+* \*://\*.instagram.com/*
 
 ### Related videos
 
