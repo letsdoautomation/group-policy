@@ -1,8 +1,4 @@
-# Group Firefox remove quick links in Home page
-
-<b>Objectives:</b>
-
-* Firefox remove quick links in Home page
+# Group Policy: Firefox set Home page and enable Home button
 
 <b>Policy location:</b> Computer Configuration -> Policies -> Administrative Templates -> Mozilla -> Firefox -> Home page
 
