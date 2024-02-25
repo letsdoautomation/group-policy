@@ -12,10 +12,10 @@
 
 <b>Policy location:</b> Computer Configuration -> Policies -> Administrative Templates -> Google -> Google Chrome -> Privacy Sandbox Settings
 
-<b>Policy name:</b> Choose whether the Privacy Sandbox prompt can be shown to your users
-<b>Policy name:</b> Choose whether the Privacy Sandbox Ad topics setting can be disabled
-<b>Policy name:</b> Choose whether the Privacy Sandbox Site-suggested ads setting can be disabled
-<b>Policy name:</b> Choose whether the Privacy Sandbox ad measurement setting can be disabled
+<b>Policy name:</b> Choose whether the Privacy Sandbox prompt can be shown to your users <br />
+<b>Policy name:</b> Choose whether the Privacy Sandbox Ad topics setting can be disabled <br />
+<b>Policy name:</b> Choose whether the Privacy Sandbox Site-suggested ads setting can be disabled <br />
+<b>Policy name:</b> Choose whether the Privacy Sandbox ad measurement setting can be disabled <br />
 
 ### Related videos
 
