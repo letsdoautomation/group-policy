@@ -4,9 +4,9 @@
 
 * Google Chrome show bookmarks bar
 
-<b>Policy location:</b> Computer Configuration -> Policies -> Administrative Templates -> Google -> Google Chrome -> Content settings
+<b>Policy location:</b> Computer Configuration -> Policies -> Administrative Templates -> Google -> Google Chrome
 
-<b>Policy name:</b> 
+<b>Policy name:</b> Enable bookmarks bar
 
 ### Related videos
 
