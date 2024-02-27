@@ -3,6 +3,7 @@
 <b>Objectives:</b>
 
 * Microsoft Edge configure start page quick links
+    * Create quick links for youtube.com and google.com
 
 <b>Policy location:</b> Computer Configuration -> Policies -> Administrative Templates -> Microsoft Edge -> Startup, home page and new tab page
 
