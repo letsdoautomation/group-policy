@@ -3,6 +3,9 @@
 <b>Objectives:</b>
 
 * Microsoft Edge configure Search Engines
+    *  set duckduckgo as default search engine
+    *  set bing as optional search engine
+    *  set google as optional search engine
 
 <b>Policy location:</b> Computer Configuration -> Policies -> Administrative Templates -> Microsoft Edge
 
