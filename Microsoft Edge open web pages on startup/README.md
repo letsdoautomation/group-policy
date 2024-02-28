@@ -14,7 +14,7 @@
 
 * Open a list of URLs
 
-<b>Policy name:</b> URLs to open on startup
+<b>Policy name:</b> Sites to open when browser starts
 
 <b>Values:</b> 
 
