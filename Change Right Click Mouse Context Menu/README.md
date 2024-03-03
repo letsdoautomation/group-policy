@@ -19,6 +19,10 @@ User Configuration -> Preferences -> Windows Settings -> Registry
 
 ### Related videos
 
+<b>WMI filters:<b> <br />
+
+[Group Policy: Create WMI filters for Windows 10 and Windows 11](https://youtu.be/7k_kpaLpMI8)
+
 <b>My windows server setup:</b> <br />
 
 [Windows Server 2022: Install File Server role and prepare a share for software deployment with GPO](https://youtu.be/jEWSdC2qwyA) <br />
