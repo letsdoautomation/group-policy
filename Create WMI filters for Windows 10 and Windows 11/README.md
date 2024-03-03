@@ -2,7 +2,7 @@
 
 <b>Objectives:</b>
 
-* <b>Create filters for:</b>
+* <b>Create wmi filters for:</b>
   * Windows 10
   * Windows 11
 
