@@ -1,6 +1,6 @@
 # Group Policy: Create WMI filters for Windows 10 and Windows 11
 
-<b>Objectives</b>
+<b>Objectives:</b>
 
 * <b>Create filters for:</b>
   * Windows 10
