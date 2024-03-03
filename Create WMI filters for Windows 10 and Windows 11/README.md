@@ -1,6 +1,6 @@
 # Group Policy: Create WMI filters for Windows 10 and Windows 11
 
-<b>Create filters for</b>
+<b>Create filters for:</b>
 
 * Windows 10
 * Windows 11
