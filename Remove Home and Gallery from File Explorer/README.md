@@ -15,7 +15,7 @@ Computer Configuration -> Preferences -> Windows Settings -> Registry
 
 <b>Action:</b> Delete <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace_36354489\{f874310e-b6b7-47dc-bc84-b9e6b38f5903} <br />
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace_36354489\\{f874310e-b6b7-47dc-bc84-b9e6b38f5903} <br />
 
 ### Remove Gallery
 
@@ -23,7 +23,7 @@ Computer Configuration -> Preferences -> Windows Settings -> Registry
 
 <b>Action:</b> Delete <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace_41040327\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c} <br />
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace_41040327\\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c} <br />
 
 ### Restore Home
 
@@ -31,7 +31,7 @@ Computer Configuration -> Preferences -> Windows Settings -> Registry
 
 <b>Action:</b> Update <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace_36354489\{f874310e-b6b7-47dc-bc84-b9e6b38f5903} <br />
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace_36354489\\{f874310e-b6b7-47dc-bc84-b9e6b38f5903} <br />
 <b>Value Name:</b> True <br />
 <b>Value Data:</b> CLSID_MSGraphHomeFolder
 
@@ -41,7 +41,7 @@ Computer Configuration -> Preferences -> Windows Settings -> Registry
 
 <b>Action:</b> Update <br />
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
-<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace_41040327\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c} <br />
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace_41040327\\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c} <br />
 <b>Value Name:</b> True <br />
 <b>Value Data:</b> {e88865ea-0e1c-4e20-9aa6-edcd0212c87c}
 
