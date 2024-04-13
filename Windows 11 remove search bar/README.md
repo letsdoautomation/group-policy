@@ -13,10 +13,6 @@
 
 ### Related videos
 
-<b>Group policy:</b>
-
-[Group policy: Install updated ADMX Policy Templates for managing Windows 11](https://youtu.be/TRaaY_7u7cw)
-
 <b>WMI filters:<b> <br />
 
 [Group Policy: Create WMI filters for Windows 10 and Windows 11](https://youtu.be/7k_kpaLpMI8)
