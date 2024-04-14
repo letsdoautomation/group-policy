@@ -18,6 +18,10 @@ wix build teams.wxs
 
 ## Related videos
 
+<b>WiX toolset 4 CLI:</b>
+
+[WiX toolset 4 CLI: Package Modern Microsoft teams MSIX into MSI]() <br />
+
 <b>Windows tools:</b>
 
 [Windows Tools: Download and install .NET 7 SDK and WiXtoolset 4 CLI tool](https://youtu.be/ukrIlmadTjw) <br />
