@@ -1,0 +1,38 @@
+﻿<?define name = ""?>
+<?define exe = ""?>
+<?define path = ""?>
+<?define version = ""?>
+<?define publisher = ""?>
+<?define guid = ""?>
+
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+        <Package Name="$(var.name)" Manufacturer="$(var.publisher)" Version="$(var.version)"
+                UpgradeCode="$(var.guid)" Scope="perMachine">
+
+                <Media Id="1" Cabinet="setup.cab" EmbedCab="yes" />
+
+                <Feature Id="InstallFeature" Title="Install Feature">
+                        <ComponentRef Id="file" />
+                </Feature>
+
+                <Property Id="DISM" Value="C:\Windows\System32\dism.exe" />
+
+                <CustomAction Id="install_msix" Return="asyncWait" Property="DISM" Execute="commit"
+                        HideTarget="yes" Impersonate="no" 
+                        ExeCommand="/Online /Add-ProvisionedAppxPackage /PackagePath:&quot;[INSTALLLOCATION]$(var.exe)&quot; /SkipLicense" />
+
+                <InstallExecuteSequence>
+                        <Custom Action="install_msix" After="InstallFiles"
+                                Condition="NOT Installed AND NOT REMOVE" />
+                </InstallExecuteSequence>
+
+                <StandardDirectory Id="TempFolder">
+                        <Directory Id="INSTALLLOCATION" Name="$(var.guid)">
+                                <Component Id="file" DiskId="1">
+                                        <File Id="executable" Name="$(var.exe)"
+                                                Source="$(var.path)\$(var.exe)" />
+                                </Component>
+                        </Directory>
+                </StandardDirectory>
+        </Package>
+</Wix>
