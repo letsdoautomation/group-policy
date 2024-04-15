@@ -20,7 +20,7 @@ wix build teams.wxs
 
 <b>WiX toolset 4 CLI:</b>
 
-[WiX toolset 4 CLI: Package Modern Microsoft teams MSIX into MSI]() <br />
+[WiX toolset 4 CLI: Package Modern Microsoft teams MSIX into MSI](https://youtu.be/c3T2TNO8yig) <br />
 
 <b>Windows tools:</b>
 
