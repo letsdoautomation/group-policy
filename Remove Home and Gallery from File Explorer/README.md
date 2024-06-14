@@ -9,6 +9,24 @@
 Computer Configuration -> Preferences -> Windows Settings -> Registry
 ```
 
+# After Windows 23h2 update
+
+<b>Policy settings:</b>
+
+<b>Action:</b> Delete <br />
+<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\\{f874310e-b6b7-47dc-bc84-b9e6b38f5903} <br />
+
+### Remove Gallery
+
+<b>Policy settings:</b>
+
+<b>Action:</b> Delete <br />
+<b>Hive:</b> HKEY_LOCAL_MACHINE <br />
+<b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\\{e88865ea-0e1c-4e20-9aa6-edcd0212c87c} <br />
+
+# Before Windows 23h2 update
+
 ### Remove Home
 
 <b>Policy settings:</b>
