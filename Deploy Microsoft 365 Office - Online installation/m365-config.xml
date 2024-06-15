@@ -1,0 +1,15 @@
+<Configuration ID="e70a9852-5ced-4bd4-b85d-d46b138a7d78">
+  <Add OfficeClientEdition="64" Channel="SemiAnnual">
+    <Product ID="O365HomePremRetail">
+      <Language ID="en-us" />
+      <ExcludeApp ID="Access" />
+      <ExcludeApp ID="Groove" />
+      <ExcludeApp ID="Lync" />
+      <ExcludeApp ID="OneDrive" />
+      <ExcludeApp ID="Publisher" />
+      <ExcludeApp ID="Teams" />
+    </Product>
+  </Add>
+  <Updates Enabled="TRUE" />
+  <Display Level="None" AcceptEULA="TRUE" />
+</Configuration>
