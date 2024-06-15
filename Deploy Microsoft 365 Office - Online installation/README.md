@@ -13,6 +13,7 @@
 <b>Objectives:</b>
 
 * Deploy Microsoft Office 365 using group policy (Online Installation from Microsoft)
+    * Use Wix Toolset to create .MSI installation file
 
 <b>Create .MSI package:</b>
 
