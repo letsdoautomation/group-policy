@@ -14,16 +14,18 @@
 <b>Generate quick links json:</b>
 
 ```powershell
-@{
-    url    = "https://google.com"
-    title  = "Google"
-    pinned = $true
-},
-@{
-    url    = "https://youtube.com"
-    title  = "Youtube"
-    pinned = $true
-} | ConvertTo-Json -Compress
+ConvertTo-Json @(
+    @{
+        url    = "https://google.com"
+        title  = "Google"
+        pinned = $true
+    },
+    @{
+        url    = "https://youtube.com"
+        title  = "Youtube"
+        pinned = $true
+    } 
+) -Compress
 ```
 
 

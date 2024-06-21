@@ -14,22 +14,24 @@
 <b>Values:</b>
 
 ```powershell
-@{
-    is_default = $true
-    keyword = "duck"
-    name = "duckduckgo.com"
-    search_url = "https://duckduckgo.com/?q={searchTerms}"
-},
-@{
-    keyword = "bing"
-    name = "bing.com"
-    search_url = "https://www.bing.com/search?q={searchTerms}"
-},
-@{
-    keyword = "google"
-    name = "google.com"
-    search_url = "https://www.google.com/search?q={searchTerms}"
-} | ConvertTo-Json -Compress
+ConvertTo-Json @(
+    @{
+        is_default = $true
+        keyword = "duck"
+        name = "duckduckgo.com"
+        search_url = "https://duckduckgo.com/?q={searchTerms}"
+    },
+    @{
+        keyword = "bing"
+        name = "bing.com"
+        search_url = "https://www.bing.com/search?q={searchTerms}"
+    },
+    @{
+        keyword = "google"
+        name = "google.com"
+        search_url = "https://www.google.com/search?q={searchTerms}"
+    }
+) -Compress
 ```
 
 ### Related videos
