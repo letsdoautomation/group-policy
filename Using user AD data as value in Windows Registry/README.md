@@ -12,21 +12,21 @@
 
 <b>Policy location:</b> User Configuration -> Preferences -> Windows Settings -> Registry
 
-<b>Action:</b> Update
-<b>Hive:</b> HKEY_CURRENT_USER
-<b>Key Path:</b> Software\Microsoft\Office\Common\UserInfo
-<b>Value name:</b> UserName
-<b>Valye type:</b> REG_SZ
+<b>Action:</b> Update <br />
+<b>Hive:</b> HKEY_CURRENT_USER <br />
+<b>Key Path:</b> Software\Microsoft\Office\Common\UserInfo <br />
+<b>Value name:</b> UserName <br />
+<b>Valye type:</b> REG_SZ <br />
 <b>Value data:</b> %var_sAMAccountName%
 
 ### Configuring item-level targeting
 
 New Item -> LDAP Query
 
-<b>Filter:</b> (&(objectClass=user)(sAMAccountName=%USERNAME%))
-<b>Binding:</b> LDAP:
-<b>Attribute:</b> sAMAccountName
-<b>Environment variable name:</b> var_sAMAccountName
+<b>Filter:</b> (&(objectClass=user)(sAMAccountName=%USERNAME%)) <br />
+<b>Binding:</b> LDAP: <br />
+<b>Attribute:</b> sAMAccountName <br />
+<b>Environment variable name:</b> var_sAMAccountName <br />
 
 ### Related videos
 
