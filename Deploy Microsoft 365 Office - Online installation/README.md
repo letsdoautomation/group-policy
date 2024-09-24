@@ -12,9 +12,9 @@
 
 <b>Objectives:</b>
 
-* Deploy Microsoft Office 365 using group policy (Online Installation from Microsoft)
-    * Use Wix Toolset to create .MSI installation file
-
+* Use Wix Toolset to create .MSI installation file
+   * Use group policy to perform machine deployment
+   * Use group policy to perform user installation
 
 <b>Generate package guid:</b>
 ```powershell
