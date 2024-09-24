@@ -12,7 +12,7 @@
 
 <b>Objectives:</b>
 
-* Use Wix Toolset to create .MSI installation file
+* Use Wix Toolset to create Microsoft 365 .MSI installation file for deployment
    * Use group policy to perform machine deployment
    * Use group policy to perform user installation
 
