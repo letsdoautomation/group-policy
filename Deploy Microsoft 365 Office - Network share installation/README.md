@@ -1,4 +1,4 @@
-# Group Policy: Deploy Microsoft 365 Office - Online installation
+# Group Policy: Deploy Microsoft 365 Office - Network share installation
 
 <b>Downloads</b>
 
@@ -12,7 +12,7 @@
 
 <b>Objectives:</b>
 
-* Deploy Microsoft Office 365 using group policy (Online Installation from Microsoft)
+* Deploy Microsoft Office 365 using group policy (Online Installation from Network share)
     * Use Wix Toolset to create .MSI installation file
 
 

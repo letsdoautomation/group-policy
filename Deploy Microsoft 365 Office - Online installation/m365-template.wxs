@@ -1,10 +1,10 @@
-<?define name = "m365-share-msi-installer"?>
-<?define exe = "setup.exe"?>
-<?define config = "m365-config.xml"?>
-<?define path = "D:\Downloads"?>
-<?define version = "1.0.0"?>
-<?define publisher = "letsdoautomation"?>
-<?define guid = "01893605-3cd6-4f85-8f88-f1bcf16e5f8f"?>
+<?define name = ""?>
+<?define exe = ""?>
+<?define config = ""?>
+<?define path = ""?>
+<?define version = ""?>
+<?define publisher = ""?>
+<?define guid = ""?>
 
 <Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
         <Package Name="$(var.name)" Manufacturer="$(var.publisher)" Version="$(var.version)"
