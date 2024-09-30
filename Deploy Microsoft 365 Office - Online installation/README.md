@@ -16,6 +16,10 @@
    * Use group policy to perform machine deployment
    * Use group policy to perform user installation
 
+<b>Notes:</b>
+
+* Installation files will be downloaded from Microsoft
+
 <b>Generate package guid:</b>
 ```powershell
 [guid]::NewGuid().guid
