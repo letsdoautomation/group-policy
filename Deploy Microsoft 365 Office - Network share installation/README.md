@@ -12,7 +12,8 @@
 
 <b>Objectives:</b>
 
-* Use Wix Toolset to create Microsoft 365 .MSI installation file for deployment
+* Download Microsoft Office installation files to a network share
+* Use Wix Toolset to create Microsoft Office 365 .MSI installation file for deployment
    * Use group policy to perform machine deployment
    * Use group policy to perform user installation
 
