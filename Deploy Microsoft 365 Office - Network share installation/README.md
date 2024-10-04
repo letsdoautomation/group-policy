@@ -1,6 +1,6 @@
 # Group Policy: Deploy Microsoft 365 Office - Network share installation
 
-<b>Downloads</b>
+<b>Downloads:</b>
 
 * [Office Deployment Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
 
@@ -12,9 +12,19 @@
 
 <b>Objectives:</b>
 
-* Deploy Microsoft Office 365 using group policy (Online Installation from Network share)
-    * Use Wix Toolset to create .MSI installation file
+* Use Wix Toolset to create Microsoft 365 .MSI installation file for deployment
+   * Use group policy to perform machine deployment
+   * Use group policy to perform user installation
 
+<b>Notes:</b>
+
+* Installation files will be downloaded from Network share
+
+<b>Download Office installation files:</b>
+
+```powershell
+setup.exe /download m365-config.xml
+```
 
 <b>Generate package guid:</b>
 ```powershell
@@ -27,14 +37,19 @@
 wix build m365-wix.wxs
 ```
 
-### Related videos
+### My enviroment setup
 
-<b>WiX toolset 4 CLI:</b>
+<b>WiX Toolset 4 CLI:</b> <br />
+[Windows Tools: Download and install .NET 7 SDK and WiXtoolset 4 CLI tool](https://youtu.be/ukrIlmadTjw) <br />
+[Group Policy: Packaging EXE into MSI for Group Policy software deployment using WiX toolset CLI](https://youtu.be/pZ42XS2Ucsg) <br />
 
-[WiX toolset 4 CLI: Create Microsoft Office MS365 MSI installation file]()
+<b>Group Policy and settings that i have configured in my servers and clients:</b> <br />
+[Group Policy: Creating 32 and 64 bit WMI filters](https://youtu.be/ffBIiQaVXGM) <br />
+[Group Policy: Always Wait for the Network at Computer Startup and Logon](https://youtu.be/8BF0rU7peNk) <br />
+[Group Policy: Display highly detailed status messages](https://youtu.be/2LB51n4O1Lk) <br />
+[Group Policy: Create an "Install a Program from the Network" desktop shortcut](https://youtu.be/s_pMiG0F0ho) <br />
 
-<b>My windows server setup:</b>
-
+<b>My windows server setup:</b> <br />
 [Windows Server 2022: Install File Server role and prepare a share for software deployment with GPO](https://youtu.be/jEWSdC2qwyA) <br />
 [Windows Server 2022: Install DHCP server](https://youtu.be/8n0MD9stQis) <br />
 [Windows Server 2022: Install Active Directory Domain Services (AD DS)](https://youtu.be/1cYewbW3Tl0) <br />
