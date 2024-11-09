@@ -4,6 +4,12 @@
 
 * Works for Microsoft Teams(new)
 
+<b>Registry entry location:</b>
+
+```batch
+HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\SystemAppData\MSTeams_8wekyb3d8bbwe\TeamsTfwStartupTask
+```
+
 <b>Policy location:</b>
 
 ```batch
