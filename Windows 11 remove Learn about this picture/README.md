@@ -3,7 +3,7 @@
 <b>Registry entry location:</b>
 
 ```batch
-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{2cc5ca98-6485-489a-920e-b3e88a6ccce3}
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel
 ```
 
 <b>Policy location:</b>
@@ -15,10 +15,10 @@ User Configuration -> Preferences -> Windows Settings -> Registry
 <b>Policy settings:</b>
 
 * <b>AutoAdminLogon</b>
-  * <b>Action:</b> Delete
+  * <b>Action:</b> Update
   * <b>Hive:</b> HKEY_CURRENT_USER
-  * <b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Desktop\NameSpace\{2cc5ca98-6485-489a-920e-b3e88a6ccce3}
-  * <b>Value name:</b> state
+  * <b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel
+  * <b>Value name:</b> {2cc5ca98-6485-489a-920e-b3e88a6ccce3}
   * <b>Value type:</b> REG_DWROD
   * <b>Value data:</b> 1
 
