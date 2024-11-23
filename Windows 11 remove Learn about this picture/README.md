@@ -1,4 +1,4 @@
-# Group Policy: Windows 11 disable Learn about this picture
+# Group Policy: Windows 11 remove Learn about this picture
 
 <b>Registry entry location:</b>
 
