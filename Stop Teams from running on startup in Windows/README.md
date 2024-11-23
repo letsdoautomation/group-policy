@@ -18,7 +18,7 @@ User Configuration -> Preferences -> Windows Settings -> Registry
 
 <b>Policy settings:</b>
 
-* <b>AutoAdminLogon</b>
+* <b>TeamsTfwStartupTask</b>
   * <b>Action:</b> Update
   * <b>Hive:</b> HKEY_CURRENT_USER
   * <b>Key Path:</b> SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\SystemAppData\MSTeams_8wekyb3d8bbwe\TeamsTfwStartupTask
