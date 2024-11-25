@@ -14,7 +14,7 @@ User Configuration -> Preferences -> Windows Settings -> Registry
 
 <b>Policy settings:</b>
 
-* <b>AutoAdminLogon</b>
+* <b>NewStartPanel</b>
   * <b>Action:</b> Update
   * <b>Hive:</b> HKEY_CURRENT_USER
   * <b>Key Path:</b> SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel
