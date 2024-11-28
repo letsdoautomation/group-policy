@@ -39,7 +39,7 @@ Computer Configuration -> Preferences -> Windows Settings -> Registry
   * <b>Key Path:</b> SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
   * <b>Value name:</b> DefaultPassword
   * <b>Value type:</b> REG_SZ
-  * <b>Value data:</b> password55!
+  * <b>Value data:</b> password55#
 
 * <b>DefaultDomainName</b>
   * <b>Action:</b> Update
