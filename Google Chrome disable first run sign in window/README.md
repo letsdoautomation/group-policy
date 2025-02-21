@@ -6,7 +6,7 @@
 
 <b>Policy location:</b> Computer Configuration -> Policies -> Administrative Templates -> Google -> Google Chrome
 
-<b>Policy name:</b> Enable showing promotional content
+<b>Policy name:</b> Enable showing promotional content <br />
 <b>Value:</b> Disabled
 
 ### Related videos
