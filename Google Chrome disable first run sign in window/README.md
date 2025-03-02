@@ -1,4 +1,4 @@
-# Group Policy: Google Chrome disable first run sign in window
+# Group Policy: Google Chrome disable first run pop-up windows
 
 <b>Objectives:</b>
 
