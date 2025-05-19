@@ -13,7 +13,7 @@
 <b>Hive:</b> HKEY_CURRENT_USER <br />
 <b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Run <br />
 <b>Value Name:</b> run_cmd <br />
-<b>Value Type:</b> REG_DWORD <br />
+<b>Value Type:</b> REG_SZ <br />
 <b>Value Data:</b> cmd.exe </br>
 
 <b>Policy settings for user RunOnce:</b>
@@ -24,7 +24,7 @@
 <b>Hive:</b> HKEY_CURRENT_USER <br />
 <b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\RunOnce <br />
 <b>Value Name:</b> run_notepad <br />
-<b>Value Type:</b> REG_DWORD <br />
+<b>Value Type:</b> REG_SZ <br />
 <b>Value Data:</b> C:\Windows\notepad.exe </br>
 
 <b>Policy settings for computer Run:</b>
@@ -35,7 +35,7 @@
 <b>Hive:</b> HKEY_LOCAL_MACHINE <br />
 <b>Key Path:</b> Software\Microsoft\Windows\CurrentVersion\Run <br />
 <b>Value Name:</b> run_msg <br />
-<b>Value Type:</b> REG_DWORD <br />
+<b>Value Type:</b> REG_SZ <br />
 <b>Value Data:</b> msg * from computer run </br>
 
 
