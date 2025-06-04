@@ -1,4 +1,4 @@
-# Group Policy: Configure HKCU Run and RunOnce
+# Group Policy: Configure Run and RunOnce
 
 <b>Objectives:</b>
 
